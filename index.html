@@ -30,7 +30,6 @@
       max-width: 500px;
       margin: 20px auto;
       opacity: 0.9;
-      font-size: 1.2rem;
     }
 
     .btn {
@@ -64,27 +63,46 @@
       color: #0a1f44;
     }
 
+    /* PHONE MOCKUP */
+    .phone {
+      margin: 50px auto;
+      width: 250px;
+      height: 500px;
+      background: black;
+      border-radius: 30px;
+      padding: 10px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    }
+
+    .screen {
+      background: linear-gradient(#163a7a, #0a1f44);
+      height: 100%;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    /* FEATURES */
     .features {
-      margin-top: 80px;
+      margin-top: 60px;
     }
 
     .feature {
-      margin: 30px auto;
+      margin: 20px auto;
       max-width: 300px;
       background: rgba(255,255,255,0.05);
       padding: 20px;
       border-radius: 15px;
     }
 
-    .card {
+    /* TRUST */
+    .trust {
       margin-top: 60px;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
-      padding: 30px;
-      border-radius: 20px;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 0.9rem;
+      opacity: 0.7;
     }
 
     footer {
@@ -107,7 +125,7 @@
     <h1>Light of Life 🙏✨</h1>
 
     <p class="subtitle">
-      Your daily Christian companion. Pray, read scripture, and find peace every day.
+      Your daily Christian companion. Pray, read scripture, and grow your faith every day.
     </p>
 
     <a class="btn btn-primary" href="#">
@@ -117,6 +135,15 @@
     <a class="btn btn-secondary" href="/genesis-2-2">
       📖 Read Today's Verse
     </a>
+
+    <!-- PHONE MOCKUP -->
+    <div class="phone">
+      <div class="screen">
+        🙏 Prayer of the Day  
+        <br><br>
+        “Lord, guide my steps and fill my heart with peace.”
+      </div>
+    </div>
 
     <!-- FEATURES -->
     <div class="features">
@@ -128,20 +155,19 @@
 
       <div class="feature">
         📖 Bible Verses  
-        <p>Read and reflect on scripture anytime.</p>
+        <p>Read and reflect anytime.</p>
       </div>
 
       <div class="feature">
         🌟 Spiritual Growth  
-        <p>Grow your faith daily with guidance.</p>
+        <p>Build a stronger faith daily.</p>
       </div>
 
     </div>
 
-    <!-- VERSE -->
-    <div class="card">
-      <h3>Verse of the Day</h3>
-      <p id="verse"></p>
+    <!-- TRUST -->
+    <div class="trust">
+      Trusted by believers worldwide ✨
     </div>
 
     <footer>
@@ -149,19 +175,6 @@
     </footer>
 
   </div>
-
-  <script>
-    const verses = [
-      "The Lord is my shepherd; I shall not want.",
-      "I can do all things through Christ who strengthens me.",
-      "Be still, and know that I am God.",
-      "The Lord bless you and keep you.",
-      "Trust in the Lord with all your heart."
-    ];
-
-    document.getElementById("verse").innerText =
-      verses[Math.floor(Math.random() * verses.length)];
-  </script>
 
 </body>
 </html>
