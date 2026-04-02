@@ -1,131 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Light of Life | Christian Prayer App</title>
+  <title>Light of Life | Christian Prayer App</title>
 
-<meta name="description" content="Light of Life is your daily Christian companion. Pray, read scripture, and share Bible verses with the world."/>
-<meta name="keywords" content="Christian app, prayer app, Bible verses, share Bible, WhatsApp, faith, God"/>
+  <meta
+    name="description"
+    content="Light of Life is your daily Christian companion. Pray, read scripture, and share Bible verses with the world."
+  />
+  <meta
+    name="keywords"
+    content="Christian app, prayer app, Bible verses, share Bible, WhatsApp, faith, God"
+  />
 
-<style>
-body {
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#07152b;
-  color:white;
-  text-align:center;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #07152b;
+      color: white;
+      text-align: center;
+    }
 
-.container {
-  padding:40px 20px;
-}
+    .container {
+      padding: 40px 20px;
+    }
 
-h1 {
-  font-size:40px;
-}
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
 
-.btn {
-  display:block;
-  margin:12px auto;
-  padding:14px;
-  border-radius:10px;
-  width:90%;
-  max-width:400px;
-  font-weight:bold;
-  cursor:pointer;
-  text-decoration:none;
-}
+    p {
+      margin-bottom: 20px;
+    }
 
-.primary { background:#d4a84f; color:#000; }
-.blue { background:#1b5cb8; color:#fff; }
-.dark { background:#111; color:#fff; }
+    .btn {
+      display: block;
+      margin: 12px auto;
+      padding: 14px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      border: none;
+      font-size: 16px;
+    }
 
-.section {
-  margin-top:40px;
-}
+    .primary {
+      background: #d4a84f;
+      color: #000;
+    }
 
-.small {
-  color:#ccc;
-  font-size:14px;
-}
-</style>
+    .blue {
+      background: #1b5cb8;
+      color: #fff;
+    }
+
+    .dark {
+      background: #111;
+      color: #fff;
+    }
+
+    .section {
+      margin-top: 40px;
+    }
+
+    .small {
+      color: #ccc;
+      font-size: 14px;
+      text-decoration: none;
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <h1>🙏 Light of Life</h1>
+    <p>Your daily Christian companion</p>
 
-<div class="container">
+    <a
+      class="btn primary"
+      href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800?l=es-MX"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      📲 Download the App
+    </a>
 
-<h1>🙏 Light of Life</h1>
-<p>Your daily Christian companion</p>
+    <a
+      class="btn blue"
+      href="https://project-chtu4.vercel.app/genesis-2-2"
+    >
+      📖 Read Today’s Verse
+    </a>
 
-<a class="btn primary" href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800?l=es-MX" target="_blank">
-📲 Download the App
-</a>
+    <button class="btn dark" onclick="shareVerse()">
+      📲 Share Verse (WhatsApp)
+    </button>
 
-<a class="btn blue" href="https://project-chtu4.vercel.app/genesis-2-2">
-📖 Read Today’s Verse
-</a>
+    <button class="btn dark" onclick="shareApp()">
+      🚀 Share App (WhatsApp)
+    </button>
 
-<button class="btn dark" onclick="shareVerse()">
-📲 Share Verse (WhatsApp)
-</button>
+    <div class="section">
+      <h2>🎥 YouTube Channels</h2>
 
-<button class="btn dark" onclick="shareApp()">
-🚀 Share App (WhatsApp)
-</button>
+      <a
+        class="btn blue"
+        href="https://www.youtube.com/@LightOfEternalLife"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🇺🇸 English Channel
+      </a>
 
-<div class="section">
-<h2>🎥 YouTube Channels</h2>
+      <a
+        class="btn blue"
+        href="https://www.youtube.com/@LuzdeVidaEterna-c8r"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🇪🇸 Canal Español
+      </a>
 
-<a class="btn blue" href="https://www.youtube.com/@LightOfEternalLife" target="_blank">
-🇺🇸 English Channel
-</a>
+      <a
+        class="btn blue"
+        href="https://www.youtube.com/@LuzDeVidaEternaPT"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🇧🇷 Canal Portugués
+      </a>
+    </div>
 
-<a class="btn blue" href="https://www.youtube.com/@LuzdeVidaEterna-c8r" target="_blank">
-🇪🇸 Canal Español
-</a>
+    <div class="section">
+      <h3>Contact</h3>
+      <a class="small" href="mailto:lightofeternallifes@gmail.com">
+        lightofeternallifes@gmail.com
+      </a>
+    </div>
+  </div>
 
-<a class="btn blue" href="https://www.youtube.com/@LuzDeVidaEternaPT" target="_blank">
-🇧🇷 Canal Portugués
-</a>
-</div>
+  <script>
+    const APP =
+      "https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800?l=es-MX";
+    const WEB = "https://project-chtu4.vercel.app";
+    const VERSE = WEB + "/genesis-2-2";
 
-<div class="section">
-<h3>Contact</h3>
-<a class="small" href="mailto:lightofeternallifes@gmail.com">
-lightofeternallifes@gmail.com
-</a>
-</div>
+    function shareVerse() {
+      const msg =
+        "📖 Genesis 2:2\n\n" +
+        "And on the seventh day God ended his work...\n\n" +
+        "Read more:\n" + VERSE + "\n\n" +
+        "Download the app:\n" + APP;
 
-<script>
-const APP = "https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800?l=es-MX";
-const WEB = "https://project-chtu4.vercel.app";
-const VERSE = WEB + "/genesis-2-2";
+      window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
+    }
 
-function shareVerse(){
-const msg =
-"📖 Genesis 2:2\n\n" +
-"And on the seventh day God ended his work...\n\n" +
-"Read more:\n" + VERSE + "\n\n" +
-"Download the app:\n" + APP;
+    function shareApp() {
+      const msg =
+        "🙏 Light of Life App\n\n" +
+        "Daily prayer, Bible, and faith in one place.\n\n" +
+        "📲 Download:\n" + APP + "\n\n" +
+        "🌐 Website:\n" + WEB;
 
-window.open("https://wa.me/?text=" + encodeURIComponent(msg));
-}
-
-function shareApp(){
-const msg =
-"🙏 Light of Life App\n\n" +
-"Daily prayer, Bible, and faith in one place.\n\n" +
-"📲 Download:\n" + APP + "\n\n" +
-"🌐 Website:\n" + WEB;
-
-window.open("https://wa.me/?text=" + encodeURIComponent(msg));
-}
-</script>
-
-</div>
-
+      window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
+    }
+  </script>
 </body>
 </html>
