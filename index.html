@@ -12,13 +12,14 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0a1f44, #0f2f6b);
+      background: radial-gradient(circle at top, #163a7a, #0a1f44);
       color: white;
       text-align: center;
     }
 
     .container {
       padding: 60px 20px;
+      animation: fadeIn 1.5s ease;
     }
 
     h1 {
@@ -47,11 +48,12 @@
     .btn-primary {
       background: #FFD700;
       color: #0a1f44;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
     }
 
     .btn-primary:hover {
-      background: #ffcc00;
-      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+      transform: scale(1.08);
     }
 
     .btn-secondary {
@@ -85,6 +87,17 @@
       font-size: 0.8rem;
       opacity: 0.6;
     }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 
@@ -108,10 +121,7 @@
 
     <div class="card">
       <h3>Verse of the Day</h3>
-      <p class="verse">
-        “The Lord bless you and keep you;  
-        the Lord make His face shine upon you.”
-      </p>
+      <p class="verse"></p>
     </div>
 
     <footer>
@@ -119,6 +129,19 @@
     </footer>
 
   </div>
+
+  <script>
+    const verses = [
+      "The Lord is my shepherd; I shall not want.",
+      "I can do all things through Christ who strengthens me.",
+      "Be still, and know that I am God.",
+      "The Lord bless you and keep you; the Lord make His face shine upon you.",
+      "Trust in the Lord with all your heart."
+    ];
+
+    document.querySelector('.verse').innerText =
+      verses[Math.floor(Math.random() * verses.length)];
+  </script>
 
 </body>
 </html>
