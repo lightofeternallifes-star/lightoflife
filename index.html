@@ -5,7 +5,6 @@
   <title>Light of Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
@@ -18,21 +17,20 @@
     }
 
     .container {
-      padding: 60px 20px;
+      padding: 80px 20px;
       animation: fadeIn 1.5s ease;
     }
 
     h1 {
       font-size: 3rem;
-      margin-bottom: 10px;
       color: #FFD700;
     }
 
-    p {
-      font-size: 1.2rem;
-      opacity: 0.9;
+    .subtitle {
       max-width: 500px;
-      margin: 0 auto 30px;
+      margin: 20px auto;
+      opacity: 0.9;
+      font-size: 1.2rem;
     }
 
     .btn {
@@ -48,12 +46,12 @@
     .btn-primary {
       background: #FFD700;
       color: #0a1f44;
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
     }
 
     .btn-primary:hover {
-      box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
       transform: scale(1.08);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.9);
     }
 
     .btn-secondary {
@@ -66,37 +64,38 @@
       color: #0a1f44;
     }
 
+    .features {
+      margin-top: 80px;
+    }
+
+    .feature {
+      margin: 30px auto;
+      max-width: 300px;
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 15px;
+    }
+
     .card {
+      margin-top: 60px;
       background: rgba(255,255,255,0.05);
       backdrop-filter: blur(10px);
       padding: 30px;
       border-radius: 20px;
-      margin-top: 40px;
       max-width: 400px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    .verse {
-      font-style: italic;
-      opacity: 0.8;
-    }
-
     footer {
-      margin-top: 60px;
+      margin-top: 80px;
       font-size: 0.8rem;
       opacity: 0.6;
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
@@ -107,8 +106,8 @@
 
     <h1>Light of Life 🙏✨</h1>
 
-    <p>
-      Find peace, strength, and connect with God every day through powerful prayers.
+    <p class="subtitle">
+      Your daily Christian companion. Pray, read scripture, and find peace every day.
     </p>
 
     <a class="btn btn-primary" href="#">
@@ -119,9 +118,30 @@
       📖 Read Today's Verse
     </a>
 
+    <!-- FEATURES -->
+    <div class="features">
+
+      <div class="feature">
+        🙏 Daily Prayers  
+        <p>Start your day connected with God.</p>
+      </div>
+
+      <div class="feature">
+        📖 Bible Verses  
+        <p>Read and reflect on scripture anytime.</p>
+      </div>
+
+      <div class="feature">
+        🌟 Spiritual Growth  
+        <p>Grow your faith daily with guidance.</p>
+      </div>
+
+    </div>
+
+    <!-- VERSE -->
     <div class="card">
       <h3>Verse of the Day</h3>
-      <p class="verse"></p>
+      <p id="verse"></p>
     </div>
 
     <footer>
@@ -135,11 +155,11 @@
       "The Lord is my shepherd; I shall not want.",
       "I can do all things through Christ who strengthens me.",
       "Be still, and know that I am God.",
-      "The Lord bless you and keep you; the Lord make His face shine upon you.",
+      "The Lord bless you and keep you.",
       "Trust in the Lord with all your heart."
     ];
 
-    document.querySelector('.verse').innerText =
+    document.getElementById("verse").innerText =
       verses[Math.floor(Math.random() * verses.length)];
   </script>
 
