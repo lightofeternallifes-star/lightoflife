@@ -1,18 +1,12 @@
 {
-  "routes": [
+  "rewrites": [
     {
-      "src": "/.well-known/apple-app-site-association",
-      "dest": "/.well-known/apple-app-site-association",
-      "headers": {
-        "Content-Type": "application/json"
-      }
+      "source": "/.well-known/apple-app-site-association",
+      "destination": "/.well-known/apple-app-site-association"
     },
     {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }
