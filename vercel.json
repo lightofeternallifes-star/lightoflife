@@ -6,6 +6,13 @@
       "headers": {
         "Content-Type": "application/json"
       }
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
