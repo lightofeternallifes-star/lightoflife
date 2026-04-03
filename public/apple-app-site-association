@@ -1,1 +1,11 @@
 
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["TEST.TEST"],
+        "paths": ["*"]
+      }
+    ]
+  }
+}
