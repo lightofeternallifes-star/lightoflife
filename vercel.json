@@ -4,5 +4,11 @@
       "src": "/.well-known/apple-app-site-association",
       "dest": "/public/.well-known/apple-app-site-association"
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
