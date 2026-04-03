@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["HN38VJ5V82.com.lightoflife.app"],
+        "paths": ["*"]
+      }
+    ]
+  }
+}
