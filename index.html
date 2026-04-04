@@ -6,14 +6,7 @@
 
   <title>Light of Life | Christian Prayer App</title>
 
-  <meta
-    name="description"
-    content="Light of Life is your daily Christian companion. Pray, read scripture, and share Bible verses with the world."
-  />
-  <meta
-    name="keywords"
-    content="Christian app, prayer app, Bible verses, share Bible, WhatsApp, faith, God"
-  />
+  <meta name="description" content="Light of Life is your daily Christian companion. Pray, read scripture, and share Bible verses." />
 
   <style>
     body {
@@ -45,7 +38,6 @@
       width: 90%;
       max-width: 400px;
       font-weight: bold;
-      cursor: pointer;
       text-decoration: none;
       border: none;
       font-size: 16px;
@@ -64,6 +56,7 @@
     .dark {
       background: #111;
       color: #fff;
+      cursor: pointer;
     }
 
     .section {
@@ -84,16 +77,15 @@
 
     <a
       class="btn primary"
-      href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800?l=es-MX"
+      href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800"
       target="_blank"
-      rel="noopener noreferrer"
     >
       📲 Download the App
     </a>
 
     <a
       class="btn blue"
-      href="https://project-chtu4.vercel.app/genesis-2-2"
+      href="https://lightoflife.app/genesis-2-2"
     >
       📖 Read Today’s Verse
     </a>
@@ -107,33 +99,18 @@
     </button>
 
     <div class="section">
-      <h2>🎥 YouTube Channels</h2>
+      <h2>🎥 YouTube</h2>
 
-      <a
-        class="btn blue"
-        href="https://www.youtube.com/@LightOfEternalLife"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        🇺🇸 English Channel
+      <a class="btn blue" href="https://www.youtube.com/@LightOfEternalLife" target="_blank">
+        🇺🇸 English
       </a>
 
-      <a
-        class="btn blue"
-        href="https://www.youtube.com/@LuzdeVidaEterna-c8r"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        🇪🇸 Canal Español
+      <a class="btn blue" href="https://www.youtube.com/@LuzdeVidaEterna-c8r" target="_blank">
+        🇪🇸 Español
       </a>
 
-      <a
-        class="btn blue"
-        href="https://www.youtube.com/@LuzDeVidaEternaPT"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        🇧🇷 Canal Portugués
+      <a class="btn blue" href="https://www.youtube.com/@LuzDeVidaEternaPT" target="_blank">
+        🇧🇷 Português
       </a>
     </div>
 
@@ -146,17 +123,51 @@
   </div>
 
   <script>
-    const APP =
-      "https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800?l=es-MX";
-    const WEB = "https://project-chtu4.vercel.app";
-    const VERSE = WEB + "/genesis-2-2";
+    const APP_STORE =
+      "https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800";
+
+    function parseSlug() {
+      const path = window.location.pathname.replace("/", "");
+      if (!path) return null;
+
+      const parts = path.split("-");
+      if (parts.length < 3) return null;
+
+      const verse = parts.pop();
+      const chapter = parts.pop();
+      const book = parts.join("-");
+
+      return { book, chapter, verse };
+    }
+
+    function openApp() {
+      const data = parseSlug();
+      if (!data) return;
+
+      const deepLink = `lightoflife://verse/${data.book}/${data.chapter}/${data.verse}`;
+
+      // intentar abrir app
+      window.location.href = deepLink;
+
+      // fallback si no abre
+      setTimeout(() => {
+        window.location.href = APP_STORE;
+      }, 1500);
+    }
+
+    // 🔥 AUTO REDIRECT SI ES LINK DE VERSO
+    if (window.location.pathname !== "/") {
+      openApp();
+    }
 
     function shareVerse() {
+      const path = window.location.pathname === "/" ? "genesis-2-2" : window.location.pathname.replace("/", "");
+      const link = "https://lightoflife.app/" + path;
+
       const msg =
-        "📖 Genesis 2:2\n\n" +
-        "And on the seventh day God ended his work...\n\n" +
-        "Read more:\n" + VERSE + "\n\n" +
-        "Download the app:\n" + APP;
+        "📖 Read this Bible verse\n\n" +
+        link + "\n\n" +
+        "🙏 Light of Life App";
 
       window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
     }
@@ -164,9 +175,8 @@
     function shareApp() {
       const msg =
         "🙏 Light of Life App\n\n" +
-        "Daily prayer, Bible, and faith in one place.\n\n" +
-        "📲 Download:\n" + APP + "\n\n" +
-        "🌐 Website:\n" + WEB;
+        "Daily prayer & Bible\n\n" +
+        "Download:\n" + APP_STORE;
 
       window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
     }
