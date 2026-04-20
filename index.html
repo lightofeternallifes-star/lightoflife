@@ -575,18 +575,35 @@
           title: title,
           text: "Check out this on Light of Life App",
           url: url
-        }).catch(err => console.log("Share cancelled"));
-      } else {
-        navigator.clipboard.writeText(url).then(() => {
-          const btn = document.getElementById("sharePageBtn");
-          const original = btn.textContent;
-          btn.textContent = "✓ Link copied";
-          setTimeout(() => {
-            btn.textContent = original;
-          }, 2000);
+        }).catch(err => {
+          intentarCopiarAlPortapapeles(url);
         });
+        return;
       }
+      
+      intentarCopiarAlPortapapeles(url);
     }
+
+    function intentarCopiarAlPortapapeles(url) {
+      navigator.clipboard.writeText(url).then(() => {
+        const btn = document.getElementById("sharePageBtn");
+        const original = btn.textContent;
+        btn.textContent = "✓ Link copied";
+        setTimeout(() => {
+          btn.textContent = original;
+        }, 2000);
+      }).catch(err => {
+        mostrarCopiaManual(url);
+      });
+    }
+
+    function mostrarCopiaManual(url) {
+      prompt(
+        "Copy this page link:\n\n(Cmd+C to copy)",
+        url
+      );
+    }
+    
   </script>
 </body>
 </html>
