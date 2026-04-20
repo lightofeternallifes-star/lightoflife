@@ -436,6 +436,9 @@
       </button>
     </div>
   </section>
+  <button class="btn-secondary" id="sharePageBtn" onclick="sharePage()">
+        🔗 Share this page
+      </button>
 
   <!-- FEATURES -->
   <section class="features">
@@ -561,6 +564,27 @@
     function shareApp() {
       const msg = "🙏 Light of Life App\n\nDaily prayer & Bible\n\nDownload:\n" + APP_STORE;
       window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
+    }
+    function sharePage() {
+      const url = window.location.href;
+      const title = "Light of Life - Daily prayer & Bible verses";
+      
+      if (navigator.share) {
+        navigator.share({
+          title: title,
+          text: "Check out this on Light of Life App",
+          url: url
+        }).catch(err => console.log("Share cancelled"));
+      } else {
+        navigator.clipboard.writeText(url).then(() => {
+          const btn = document.getElementById("sharePageBtn");
+          const original = btn.textContent;
+          btn.textContent = "✓ Link copied";
+          setTimeout(() => {
+            btn.textContent = original;
+          }, 2000);
+        });
+      }
     }
   </script>
 </body>
