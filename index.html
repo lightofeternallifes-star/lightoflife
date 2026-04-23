@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Light of Life | Christian Prayer App</title>
-  <meta name="description" content="Light of Life is your daily Christian companion. Pray, read scripture, and share Bible verses." />
+  <meta name="description"
+    content="Light of Life is your daily Christian companion. Pray, read scripture, and share Bible verses." />
   <meta name="apple-itunes-app" content="app-id=6757895800" />
   <meta property="og:title" content="Light of Life | Christian Prayer App" />
-  <meta property="og:description" content="Your daily Christian companion. Pray, read scripture, and share Bible verses." />
+  <meta property="og:description"
+    content="Your daily Christian companion. Pray, read scripture, and share Bible verses." />
   <meta property="og:image" content="https://lightoflife.app/icon.png" />
   <meta property="og:url" content="https://lightoflife.app" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
- 
-<style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
       --navy: #07152b;
@@ -28,12 +37,14 @@
       --blue: #1b5cb8;
       --blue-light: #2470e0;
       --white: #ffffff;
-      --white-70: rgba(255,255,255,0.7);
-      --white-30: rgba(255,255,255,0.3);
-      --white-10: rgba(255,255,255,0.08);
+      --white-70: rgba(255, 255, 255, 0.7);
+      --white-30: rgba(255, 255, 255, 0.3);
+      --white-10: rgba(255, 255, 255, 0.08);
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'Inter', Arial, sans-serif;
@@ -113,7 +124,7 @@
     .hero-phone-real img {
       width: 360px;
       border-radius: 30px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
     }
 
     .cta-group {
@@ -122,88 +133,89 @@
       gap: 12px;
     }
 
-   @media (max-width: 768px) {
-  .language-selector {
-    position: static;
-    margin: 0 auto 18px auto;
-    width: fit-content;
-    transform: none;
-  }
+    @media (max-width: 768px) {
+      .language-selector {
+        position: static;
+        margin: 0 auto 18px auto;
+        width: fit-content;
+        transform: none;
+      }
 
-  .hero {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 32px 20px 48px;
-    gap: 0;
-  }
+      .hero {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 20px 48px;
+        gap: 0;
+      }
 
-  .hero-copy {
-    display: contents;
-  }
+      .hero-copy {
+        display: contents;
+      }
 
-  .hero .badge {
-    order: 1;
-    margin: 0 auto 18px;
-    width: fit-content;
-  }
+      .hero .badge {
+        order: 1;
+        margin: 0 auto 18px;
+        width: fit-content;
+      }
 
-  .hero h1 {
-    order: 2;
-    font-size: clamp(40px, 10vw, 56px);
-    line-height: 0.98;
-    letter-spacing: -1.2px;
-    margin: 0 0 18px 0;
-  }
+      .hero h1 {
+        order: 2;
+        font-size: clamp(40px, 10vw, 56px);
+        line-height: 0.98;
+        letter-spacing: -1.2px;
+        margin: 0 0 18px 0;
+      }
 
-  .hero .hero-sub {
-    order: 3;
-    max-width: 100%;
-    margin: 0 auto 24px;
-    font-size: 17px;
-    line-height: 1.6;
-    color: rgba(255,255,255,0.78);
-  }
+      .hero .hero-sub {
+        order: 3;
+        max-width: 100%;
+        margin: 0 auto 24px;
+        font-size: 17px;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.78);
+      }
 
-  .hero-phone-real {
-    order: 4;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0 0 24px 0;
-  }
+      .hero-phone-real {
+        order: 4;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 0 24px 0;
+      }
 
-  .hero-phone-real img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 28px;
-  }
+      .hero-phone-real img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 28px;
+      }
 
-  .hero .cta-group {
-    order: 5;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    margin-top: 0;
-  }
+      .hero .cta-group {
+        order: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 0;
+      }
 
-  .cta-group .btn-primary,
-  .cta-group .btn-secondary,
-  .cta-group .btn-whatsapp,
-  .cta-group button {
-    min-height: 60px;
-    border-radius: 20px;
-  }
-}
+      .cta-group .btn-primary,
+      .cta-group .btn-secondary,
+      .cta-group .btn-whatsapp,
+      .cta-group button {
+        min-height: 60px;
+        border-radius: 20px;
+      }
+    }
+
     .hero::before {
       content: '';
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,168,79,0.12) 0%, transparent 70%),
-        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(27,92,184,0.15) 0%, transparent 70%);
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212, 168, 79, 0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(27, 92, 184, 0.15) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -212,7 +224,7 @@
       width: 600px;
       height: 600px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(212,168,79,0.06) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(212, 168, 79, 0.06) 0%, transparent 70%);
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -224,7 +236,7 @@
       height: 100px;
       border-radius: 22px;
       margin-bottom: 28px;
-      box-shadow: 0 20px 60px rgba(212,168,79,0.3), 0 0 0 1px rgba(212,168,79,0.2);
+      box-shadow: 0 20px 60px rgba(212, 168, 79, 0.3), 0 0 0 1px rgba(212, 168, 79, 0.2);
       position: relative;
       z-index: 1;
       background: linear-gradient(135deg, #0a1f3d, #1a3a6e);
@@ -239,7 +251,7 @@
       align-items: center;
       gap: 6px;
       background: var(--white-10);
-      border: 1px solid rgba(212,168,79,0.3);
+      border: 1px solid rgba(212, 168, 79, 0.3);
       border-radius: 100px;
       padding: 6px 14px;
       font-size: 12px;
@@ -261,8 +273,17 @@
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.8); }
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+      }
     }
 
     .hero h1 {
@@ -316,17 +337,19 @@
       text-decoration: none;
       border: none;
       cursor: pointer;
-      box-shadow: 0 8px 32px rgba(212,168,79,0.35);
+      box-shadow: 0 8px 32px rgba(212, 168, 79, 0.35);
       transition: transform 0.15s, box-shadow 0.15s;
       letter-spacing: -0.2px;
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(212,168,79,0.45);
+      box-shadow: 0 12px 40px rgba(212, 168, 79, 0.45);
     }
 
-    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:active {
+      transform: translateY(0);
+    }
 
     .btn-secondary {
       display: flex;
@@ -347,8 +370,8 @@
     }
 
     .btn-secondary:hover {
-      background: rgba(255,255,255,0.12);
-      border-color: rgba(255,255,255,0.5);
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.5);
     }
 
     .btn-whatsapp {
@@ -356,19 +379,21 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: rgba(37,211,102,0.12);
+      background: rgba(37, 211, 102, 0.12);
       color: #25d366;
       font-weight: 600;
       font-size: 16px;
       padding: 16px 28px;
       border-radius: 16px;
       text-decoration: none;
-      border: 1px solid rgba(37,211,102,0.25);
+      border: 1px solid rgba(37, 211, 102, 0.25);
       cursor: pointer;
       transition: background 0.15s;
     }
 
-    .btn-whatsapp:hover { background: rgba(37,211,102,0.2); }
+    .btn-whatsapp:hover {
+      background: rgba(37, 211, 102, 0.2);
+    }
 
     /* FEATURES */
     .features {
@@ -410,7 +435,7 @@
     }
 
     .feature-card:hover {
-      border-color: rgba(212,168,79,0.3);
+      border-color: rgba(212, 168, 79, 0.3);
       transform: translateY(-4px);
     }
 
@@ -472,8 +497,8 @@
     }
 
     .btn-youtube:hover {
-      border-color: rgba(255,0,0,0.4);
-      background: rgba(255,0,0,0.06);
+      border-color: rgba(255, 0, 0, 0.4);
+      background: rgba(255, 0, 0, 0.06);
     }
 
     .yt-icon {
@@ -533,16 +558,20 @@
       transition: color 0.2s;
     }
 
-    .footer-links a:hover { color: var(--gold); }
+    .footer-links a:hover {
+      color: var(--gold);
+    }
 
     .footer-copy {
       margin-top: 24px;
       font-size: 12px;
-      color: rgba(255,255,255,0.35);
+      color: rgba(255, 255, 255, 0.35);
     }
 
     @media (max-width: 480px) {
-      .features-grid { grid-template-columns: 1fr; }
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .feature-section {
@@ -641,23 +670,23 @@
     .feature-cta .btn-primary {
       background: var(--gold);
       color: #000;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
 
     .feature-cta .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
     }
 
     .feature-cta .btn-secondary {
       background: transparent;
       color: var(--white);
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .feature-cta .btn-secondary:hover {
       transform: translateY(-2px);
-      background: rgba(255,255,255,0.06);
+      background: rgba(255, 255, 255, 0.06);
     }
 
     .feature-shot {
@@ -715,293 +744,307 @@
         order: unset;
       }
     }
+
     @media (max-width: 768px) {
-       .feature-grid {
-         grid-template-columns: 1fr !important;
-         gap: 28px;
-         text-align: center;
+      .feature-grid {
+        grid-template-columns: 1fr !important;
+        gap: 28px;
+        text-align: center;
       }
 
-  .feature-shot,
-  .feature-visual {
-    order: 1 !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 8px;
-  }
+      .feature-shot,
+      .feature-visual {
+        order: 1 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 8px;
+      }
 
-  .feature-copy,
-  .feature-content {
-    order: 2 !important;
-    max-width: 100%;
-  }
+      .feature-copy,
+      .feature-content {
+        order: 2 !important;
+        max-width: 100%;
+      }
 
-  .feature-shot img,
-  .feature-visual img {
-    display: block;
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    margin: 0 auto;
-  }
+      .feature-shot img,
+      .feature-visual img {
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto;
+      }
 
-  .feature-title {
-    font-size: 44px;
-    line-height: 1.05;
-  }
+      .feature-title {
+        font-size: 44px;
+        line-height: 1.05;
+      }
 
-  .feature-copy h2,
-  .feature-content h2 {
-    font-size: 28px;
-    line-height: 1.15;
-  }
+      .feature-copy h2,
+      .feature-content h2 {
+        font-size: 28px;
+        line-height: 1.15;
+      }
 
-  .feature-copy p,
-  .feature-content p {
-    font-size: 16px;
-    line-height: 1.7;
-  }
+      .feature-copy p,
+      .feature-content p {
+        font-size: 16px;
+        line-height: 1.7;
+      }
 
-  .feature-list {
-    gap: 10px;
-  }
+      .feature-list {
+        gap: 10px;
+      }
 
-  .feature-list li {
-    padding-left: 0;
-  }
+      .feature-list li {
+        padding-left: 0;
+      }
 
-  .feature-list li::before {
-    display: none;
-  }
+      .feature-list li::before {
+        display: none;
+      }
 
-  .feature-cta {
-    justify-content: center;
-  }
+      .feature-cta {
+        justify-content: center;
+      }
 
-  .feature-section.alt .feature-copy,
-  .feature-section.alt .feature-shot,
-  .feature-section.alt .feature-visual {
-    order: unset;
-  }
+      .feature-section.alt .feature-copy,
+      .feature-section.alt .feature-shot,
+      .feature-section.alt .feature-visual {
+        order: unset;
+      }
 
-  .feature-section.alt .feature-shot,
-  .feature-section.alt .feature-visual {
-    order: 1 !important;
-  }
+      .feature-section.alt .feature-shot,
+      .feature-section.alt .feature-visual {
+        order: 1 !important;
+      }
 
-  .feature-section.alt .feature-copy {
-    order: 2 !important;
-  }
-}
+      .feature-section.alt .feature-copy {
+        order: 2 !important;
+      }
+    }
+
     .hidden {
       display: none !important;
     }
+
     @media (max-width: 768px) {
-  .hero {
-    padding: 36px 20px 56px;
-    gap: 0;
-  }
+      .hero {
+        padding: 36px 20px 56px;
+        gap: 0;
+      }
 
-  .language-selector {
-    margin: 0 auto 18px;
-    width: fit-content;
-    transform: scale(0.96);
-    transform-origin: center;
-  }
+      .language-selector {
+        margin: 0 auto 18px;
+        width: fit-content;
+        transform: scale(0.96);
+        transform-origin: center;
+      }
 
-  .badge {
-    margin: 0 auto 18px;
-    width: fit-content;
-  }
+      .badge {
+        margin: 0 auto 18px;
+        width: fit-content;
+      }
 
-  .hero h1 {
-    font-size: clamp(42px, 10vw, 58px);
-    line-height: 0.98;
-    letter-spacing: -1.5px;
-    margin-bottom: 18px;
-  }
+      .hero h1 {
+        font-size: clamp(42px, 10vw, 58px);
+        line-height: 0.98;
+        letter-spacing: -1.5px;
+        margin-bottom: 18px;
+      }
 
-  .hero-sub {
-    max-width: 92%;
-    margin: 0 auto 0;
-    font-size: 18px;
-    line-height: 1.6;
-    color: rgba(255,255,255,0.78);
-  }
+      .hero-sub {
+        max-width: 92%;
+        margin: 0 auto 0;
+        font-size: 18px;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.78);
+      }
 
-  .hero-phone-real {
-    margin: 28px 0 26px 0;
-  }
+      .hero-phone-real {
+        margin: 28px 0 26px 0;
+      }
 
-  .hero-phone-real img {
-    max-width: 340px;
-    border-radius: 34px;
-    box-shadow:
-      0 24px 70px rgba(0,0,0,0.38),
-      0 0 0 1px rgba(255,255,255,0.04);
-  }
+      .hero-phone-real img {
+        max-width: 340px;
+        border-radius: 34px;
+        box-shadow:
+          0 24px 70px rgba(0, 0, 0, 0.38),
+          0 0 0 1px rgba(255, 255, 255, 0.04);
+      }
 
-  .cta-group {
-    gap: 14px;
-    margin-top: 0;
-  }
+      .cta-group {
+        gap: 14px;
+        margin-top: 0;
+      }
 
-  .cta-group .btn-primary,
-  .cta-group .btn-secondary,
-  .cta-group .btn-whatsapp,
-  .cta-group button {
-    min-height: 64px;
-    border-radius: 22px;
-    font-size: 17px;
-    font-weight: 700;
-    letter-spacing: -0.2px;
-  }
+      .cta-group .btn-primary,
+      .cta-group .btn-secondary,
+      .cta-group .btn-whatsapp,
+      .cta-group button {
+        min-height: 64px;
+        border-radius: 22px;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+      }
 
-  .btn-primary {
-    box-shadow: 0 16px 36px rgba(212,170,73,0.22);
-  }
+      .btn-primary {
+        box-shadow: 0 16px 36px rgba(212, 170, 73, 0.22);
+      }
 
-  .btn-secondary {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.22);
-    backdrop-filter: blur(10px);
-  }
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        backdrop-filter: blur(10px);
+      }
 
-  .btn-whatsapp {
-    box-shadow: 0 14px 30px rgba(0,0,0,0.16);
-  }
-}
-.donation-options button.active {
-  background: linear-gradient(135deg, #FFD700, #FFA500);
-  color: #000;
-  transform: scale(1.08);
-  box-shadow: 0 6px 18px rgba(255, 215, 0, 0.4);
-}
+      .btn-whatsapp {
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
+      }
+    }
 
-/* ===== PREMIUM DONATE BUTTON ===== */
+    .donation-options button.active {
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      color: #000;
+      transform: scale(1.08);
+      box-shadow: 0 6px 18px rgba(255, 215, 0, 0.4);
+    }
 
-.btn-donate {
-  position: relative;
-  background: linear-gradient(135deg, #FFD700, #C9A646);
-  color: #000;
-  padding: 14px 26px;
-  border-radius: 12px;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-block;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  
-}
+    /* ===== PREMIUM DONATE BUTTON ===== */
 
-.btn-donate span {
-  position: relative;
-  z-index: 2;
-}
+    .btn-donate {
+      position: relative;
+      background: linear-gradient(135deg, #FFD700, #C9A646);
+      color: #000;
+      padding: 14px 26px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      overflow: hidden;
+      transition: all 0.3s ease;
 
-/* Glow */
-.btn-donate::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,215,0,0.25) 0%, transparent 60%);
-  animation: donateGlow 4s infinite linear;
-}
+    }
 
-/* Shine */
-.btn-donate::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.5),
-    transparent
-  );
-  transform: skewX(-25deg);
-}
+    .btn-donate span {
+      position: relative;
+      z-index: 2;
+    }
 
-.btn-donate:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.45);
-}
+    /* Glow */
+    .btn-donate::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 215, 0, 0.25) 0%, transparent 60%);
+      animation: donateGlow 4s infinite linear;
+    }
 
-.btn-donate:hover::after {
-  animation: shine 0.9s forwards;
-}
+    /* Shine */
+    .btn-donate::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(120deg,
+          transparent,
+          rgba(255, 255, 255, 0.5),
+          transparent);
+      transform: skewX(-25deg);
+    }
 
-@keyframes donateGlow {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+    .btn-donate:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(255, 215, 0, 0.45);
+    }
 
-@keyframes shine {
-  0% { left: -75%; }
-  100% { left: 125%; }
-}
-.donation-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
+    .btn-donate:hover::after {
+      animation: shine 0.9s forwards;
+    }
 
-.hidden {
-  display: none;
-}
+    @keyframes donateGlow {
+      0% {
+        transform: rotate(0deg);
+      }
 
-.donation-box {
-  background: #fff;
-  padding: 30px;
-  border-radius: 16px;
-  text-align: center;
-  width: 90%;
-  max-width: 400px;
-}
+      100% {
+        transform: rotate(360deg);
+      }
+    }
 
-.donation-options button {
-  margin: 6px;
-  padding: 10px 16px;
-  border-radius: 10px;
-  border: none;
-  background: #eee;
-  cursor: pointer;
-}
+    @keyframes shine {
+      0% {
+        left: -75%;
+      }
 
-.donation-options button:hover {
-  background: gold;
-}
+      100% {
+        left: 125%;
+      }
+    }
 
-.donate-main {
-  margin-top: 20px;
-  background: gold;
-  padding: 14px;
-  width: 100%;
-  border: none;
-  border-radius: 12px;
-  font-weight: bold;
-}
+    .donation-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
 
-.close-modal {
-  margin-top: 10px;
-  background: transparent;
-  border: none;
-  color: gray;
-}
-</style>
+    .hidden {
+      display: none;
+    }
+
+    .donation-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .donation-options button {
+      margin: 6px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: none;
+      background: #eee;
+      cursor: pointer;
+    }
+
+    .donation-options button:hover {
+      background: gold;
+    }
+
+    .donate-main {
+      margin-top: 20px;
+      background: gold;
+      padding: 14px;
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    .close-modal {
+      margin-top: 10px;
+      background: transparent;
+      border: none;
+      color: gray;
+    }
+  </style>
 </head>
+
 <body>
 
   <!-- LANGUAGE SELECTOR -->
@@ -1018,34 +1061,41 @@
     <div class="hero-copy">
       <div class="badge">
         <span class="badge-dot"></span>
-        <span data-en="Available on App Store" data-es="Disponible en App Store" data-pt="Disponível na App Store"></span>
+        <span data-en="Available on App Store" data-es="Disponible en App Store"
+          data-pt="Disponível na App Store"></span>
       </div>
 
       <h1>
-        <span data-en="Find peace, Community Aid and answers in one place." data-es="Encuentra paz, Ayuda Comunitaria y respuesta en un solo lugar." data-pt="Encontre paz, Ajuda Comunitária e respostas em um único lugar."></span>
+        <span data-en="Find peace, Community Aid and answers in one place."
+          data-es="Encuentra paz, Ayuda Comunitaria y respuesta en un solo lugar."
+          data-pt="Encontre paz, Ajuda Comunitária e respostas em um único lugar."></span>
       </h1>
 
-      <p class="hero-sub" data-en="Light of Life is your daily spiritual guide. Pray, listen, learn and find Community Aid, Bible, AI Spiritual Counselor and tools designed to accompany you every day." data-es="Light of Life es tu guía espiritual diaria. Ora, escucha, aprende y encuentra Ayuda Comunitaria, Biblia, Consejero Espiritual IA y herramientas pensadas para acompañarte cada día." data-pt="Light of Life é seu guia espiritual diário. Ore, ouça, aprenda e encontre Ajuda Comunitária, Bíblia, Conselheiro Espiritual com IA e ferramentas projetadas para acompanhá-lo todos os dias."></p>
+      <p class="hero-sub"
+        data-en="Light of Life is your daily spiritual guide. Pray, listen, learn and find Community Aid, Bible, AI Spiritual Counselor and tools designed to accompany you every day."
+        data-es="Light of Life es tu guía espiritual diaria. Ora, escucha, aprende y encuentra Ayuda Comunitaria, Biblia, Consejero Espiritual IA y herramientas pensadas para acompañarte cada día."
+        data-pt="Light of Life é seu guia espiritual diário. Ore, ouça, aprenda e encontre Ajuda Comunitária, Bíblia, Conselheiro Espiritual com IA e ferramentas projetadas para acompanhá-lo todos os dias.">
+      </p>
 
       <div class="cta-group">
-        <a class="btn-primary" href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800?l=es-MX" target="_blank">
-          <span data-en="Download on the App Store" data-es="Descargar en la App Store" data-pt="Baixar na App Store"></span>
+        <a class="btn-primary" href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800?l=es-MX"
+          target="_blank">
+          <span data-en="Download on the App Store" data-es="Descargar en la App Store"
+            data-pt="Baixar na App Store"></span>
         </a>
-<a class="btn-donate" onclick="openDonationModal()">
-  <span
-    data-en="Support this Ministry ❤️"
-    data-es="Apoya este ministerio ❤️"
-    data-pt="Apoie este ministério ❤️"
-  >
-    Support this Ministry ❤️
-  </span>
-</a>
+        <a class="btn-donate" onclick="openDonationModal()">
+          <span data-en="Support this Ministry ❤️" data-es="Apoya este ministerio ❤️"
+            data-pt="Apoie este ministério ❤️">
+            Support this Ministry ❤️
+          </span>
+        </a>
         <a class="btn-secondary" href="https://lightoflife.app/verse/john/3/16">
           <span data-en="Read Today's Verse" data-es="Leer versículo de hoy" data-pt="Ler versículo de hoje"></span>
         </a>
 
         <button class="btn-whatsapp" onclick="shareApp()">
-          <span data-en="Share App on WhatsApp" data-es="Compartir app en WhatsApp" data-pt="Compartilhar app no WhatsApp"></span>
+          <span data-en="Share App on WhatsApp" data-es="Compartir app en WhatsApp"
+            data-pt="Compartilhar app no WhatsApp"></span>
         </button>
 
         <button class="btn-primary" id="sharePageBtn" onclick="sharePage()">
@@ -1055,15 +1105,10 @@
     </div>
 
     <div class="hero-phone-real">
-  <img
-    id="hero-image"
-    src="/screenshots/en/home-main-en.png"
-    data-en="/screenshots/en/home-main-en.png"
-    data-es="/screenshots/es/home-main-es.png"
-    data-pt="/screenshots/pt/home-main-pt.png"
-    alt="Light of Life Home Screen"
-  />
-</div>
+      <img id="hero-image" src="/screenshots/en/home-main-en.png" data-en="/screenshots/en/home-main-en.png"
+        data-es="/screenshots/es/home-main-es.png" data-pt="/screenshots/pt/home-main-pt.png"
+        alt="Light of Life Home Screen" />
+    </div>
   </section>
 
   <!-- COMMUNITY AID -->
@@ -1071,36 +1116,43 @@
     <div class="feature-grid">
       <div class="feature-copy">
         <div class="feature-cta">
-          <a class="btn-primary" href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800" target="_blank">
-            🙏 <span data-en="Explore available help" data-es="Explorar ayuda disponible" data-pt="Explorar ajuda disponível"></span>
+          <a class="btn-primary" href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800"
+            target="_blank">
+            🙏 <span data-en="Explore available help" data-es="Explorar ayuda disponible"
+              data-pt="Explorar ajuda disponível"></span>
           </a>
         </div>
         <h3 class="feature-title" data-en="Community Aid" data-es="Ayuda Comunitaria" data-pt="Ajuda Comunitária"></h3>
-        <h2 data-en="Find real help in your most difficult moment" data-es="Encuentra ayuda real en tu momento más difícil" data-pt="Encontre ajuda real em seu momento mais difícil"></h2>
-        <p data-en="This section connects people with concrete help in their community. It doesn't just inspire: it also guides towards food, clothing, nearby support and real resources for difficult times." data-es="Esta sección conecta a las personas con ayuda concreta en su comunidad. No solo inspira: también orienta hacia comida, ropa, apoyo cercano y recursos reales para momentos difíciles." data-pt="Esta seção conecta pessoas com ajuda concreta em sua comunidade. Não apenas inspira: também orienta para alimentos, roupas, apoio próximo e recursos reais para momentos difíceis."></p>
+        <h2 data-en="Find real help in your most difficult moment"
+          data-es="Encuentra ayuda real en tu momento más difícil"
+          data-pt="Encontre ajuda real em seu momento mais difícil"></h2>
+        <p data-en="This section connects people with concrete help in their community. It doesn't just inspire: it also guides towards food, clothing, nearby support and real resources for difficult times."
+          data-es="Esta sección conecta a las personas con ayuda concreta en su comunidad. No solo inspira: también orienta hacia comida, ropa, apoyo cercano y recursos reales para momentos difíciles."
+          data-pt="Esta seção conecta pessoas com ajuda concreta em sua comunidade. Não apenas inspira: também orienta para alimentos, roupas, apoio próximo e recursos reais para momentos difíceis.">
+        </p>
 
         <ul class="feature-list">
-          <li data-en="Find help near you" data-es="Encuentra ayuda cerca de ti" data-pt="Encontre ajuda perto de você"></li>
-          <li data-en="Access real and useful resources" data-es="Accede a recursos reales y útiles" data-pt="Acesse recursos reais e úteis"></li>
-          <li data-en="Receive support with a clear experience" data-es="Recibe apoyo con una experiencia clara" data-pt="Receba suporte com uma experiência clara"></li>
-          <li data-en="Connect faith with concrete action" data-es="Conecta fe con acción concreta" data-pt="Conecte fé com ação concreta"></li>
+          <li data-en="Find help near you" data-es="Encuentra ayuda cerca de ti" data-pt="Encontre ajuda perto de você">
+          </li>
+          <li data-en="Access real and useful resources" data-es="Accede a recursos reales y útiles"
+            data-pt="Acesse recursos reais e úteis"></li>
+          <li data-en="Receive support with a clear experience" data-es="Recibe apoyo con una experiencia clara"
+            data-pt="Receba suporte com uma experiência clara"></li>
+          <li data-en="Connect faith with concrete action" data-es="Conecta fe con acción concreta"
+            data-pt="Conecte fé com ação concreta"></li>
         </ul>
         <div class="feature-cta">
-          <a class="btn-primary" href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800" target="_blank">
+          <a class="btn-primary" href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800"
+            target="_blank">
             🆘 <span data-en="Urgent help" data-es="Ayuda urgente" data-pt="Ajuda urgente"></span>
           </a>
         </div>
       </div>
 
       <div class="feature-shot">
-       <img
-  id="community-aid-image"
-  src="/screenshots/en/community-aid-en.png"
-  data-en="/screenshots/en/community-aid-en.png"
-  data-es="/screenshots/es/community-aid-es.png"
-  data-pt="/screenshots/pt/community-aid-pt.png"
-  alt="Community Aid Screen"
-/>
+        <img id="community-aid-image" src="/screenshots/en/community-aid-en.png"
+          data-en="/screenshots/en/community-aid-en.png" data-es="/screenshots/es/community-aid-es.png"
+          data-pt="/screenshots/pt/community-aid-pt.png" alt="Community Aid Screen" />
       </div>
     </div>
   </section>
@@ -1110,14 +1162,22 @@
     <div class="feature-grid">
       <div class="feature-copy">
         <h3 class="feature-title" data-en="Word of God" data-es="Palabra de Dios" data-pt="Palavra de Deus"></h3>
-        <h2 data-en="Read, listen and meditate on God's Word" data-es="Lee, escucha y medita en la Palabra de Dios" data-pt="Leia, ouça e medite na Palavra de Deus"></h2>
-        <p data-en="This section helps the user approach the Bible in a clear, modern and easy-to-use way. You can read verses, listen to them in audio and reflect without feeling lost." data-es="Esta sección ayuda al usuario a acercarse a la Biblia de una manera clara, moderna y fácil de usar. Puede leer versículos, escucharlos en audio y reflexionar sin sentirse perdido." data-pt="Esta seção ajuda o usuário a se aproximar da Bíblia de forma clara, moderna e fácil de usar. Você pode ler versículos, ouvi-los em áudio e refletir sem se sentir perdido."></p>
+        <h2 data-en="Read, listen and meditate on God's Word" data-es="Lee, escucha y medita en la Palabra de Dios"
+          data-pt="Leia, ouça e medite na Palavra de Deus"></h2>
+        <p data-en="This section helps the user approach the Bible in a clear, modern and easy-to-use way. You can read verses, listen to them in audio and reflect without feeling lost."
+          data-es="Esta sección ayuda al usuario a acercarse a la Biblia de una manera clara, moderna y fácil de usar. Puede leer versículos, escucharlos en audio y reflexionar sin sentirse perdido."
+          data-pt="Esta seção ajuda o usuário a se aproximar da Bíblia de forma clara, moderna e fácil de usar. Você pode ler versículos, ouvi-los em áudio e refletir sem se sentir perdido.">
+        </p>
 
         <ul class="feature-list">
-          <li data-en="Read verses with clean and clear design" data-es="Lee versículos con diseño limpio y claro" data-pt="Leia versículos com design limpo e claro"></li>
-          <li data-en="Listen to God's Word in audio" data-es="Escucha la Palabra en audio" data-pt="Ouça a Palavra em áudio"></li>
-          <li data-en="Share easily with others" data-es="Comparte fácilmente con otros" data-pt="Compartilhe facilmente com outros"></li>
-          <li data-en="Quick access to biblical reflection" data-es="Acceso rápido a reflexión bíblica" data-pt="Acesso rápido à reflexão bíblica"></li>
+          <li data-en="Read verses with clean and clear design" data-es="Lee versículos con diseño limpio y claro"
+            data-pt="Leia versículos com design limpo e claro"></li>
+          <li data-en="Listen to God's Word in audio" data-es="Escucha la Palabra en audio"
+            data-pt="Ouça a Palavra em áudio"></li>
+          <li data-en="Share easily with others" data-es="Comparte fácilmente con otros"
+            data-pt="Compartilhe facilmente com outros"></li>
+          <li data-en="Quick access to biblical reflection" data-es="Acceso rápido a reflexión bíblica"
+            data-pt="Acesso rápido à reflexão bíblica"></li>
         </ul>
         <div class="feature-cta">
           <a href="https://www.lightoflife.app/" target="_blank" class="btn-primary">
@@ -1125,247 +1185,234 @@
           </a>
 
           <a href="https://www.lightoflife.app/" target="_blank" class="btn-secondary">
-            🎧 <span data-en="Listen to today's verse" data-es="Escuchar versículo de hoy" data-pt="Ouça versículo de hoje"></span>
+            🎧 <span data-en="Listen to today's verse" data-es="Escuchar versículo de hoy"
+              data-pt="Ouça versículo de hoje"></span>
           </a>
         </div>
       </div>
 
       <div class="feature-shot">
-      <img
-  id="word-of-god-image"
-  src="/screenshots/en/word-of-god-en.png"
-  data-en="/screenshots/en/word-of-god-en.png"
-  data-es="/screenshots/es/palabra-dios-es.png"
-  data-pt="/screenshots/pt/palavra-dios-pt.png"
-  alt="Word of God Screen"
-/>
+        <img id="word-of-god-image" src="/screenshots/en/word-of-god-en.png"
+          data-en="/screenshots/en/word-of-god-en.png" data-es="/screenshots/es/palabra-dios-es.png"
+          data-pt="/screenshots/pt/palavra-dios-pt.png" alt="Word of God Screen" />
       </div>
     </div>
   </section>
-<section class="feature-section">
-  <div class="feature-grid">
-    <div class="feature-copy">
-      <h3
-        class="feature-title"
-        data-en="AI SPIRITUAL COUNSELOR"
-        data-es="CONSEJERO ESPIRITUAL IA"
-        data-pt="CONSELHEIRO ESPIRITUAL IA"
-      >AI SPIRITUAL COUNSELOR</h3>
+  <section class="feature-section">
+    <div class="feature-grid">
+      <div class="feature-copy">
+        <h3 class="feature-title" data-en="AI SPIRITUAL COUNSELOR" data-es="CONSEJERO ESPIRITUAL IA"
+          data-pt="CONSELHEIRO ESPIRITUAL IA">AI SPIRITUAL COUNSELOR</h3>
 
-      <h2
-        data-en="Tell us how you feel and receive guidance rooted in faith"
-        data-es="Dime cómo te sientes y recibe guía basada en la fe"
-        data-pt="Diga como você se sente e receba orientação baseada na fé"
-      >Tell us how you feel and receive guidance rooted in faith</h2>
+        <h2 data-en="Tell us how you feel and receive guidance rooted in faith"
+          data-es="Dime cómo te sientes y recibe guía basada en la fe"
+          data-pt="Diga como você se sente e receba orientação baseada na fé">Tell us how you feel and receive guidance
+          rooted in faith</h2>
 
-      <p
-        data-en="This section helps the user express emotions, receive spiritual guidance and connect with prayers inspired by the Word of God."
-        data-es="Esta sección ayuda al usuario a expresar emociones, recibir guía espiritual y conectarse con oraciones inspiradas en la Palabra de Dios."
-        data-pt="Esta seção ajuda o usuário a expressar emoções, receber orientação espiritual e conectar-se com orações inspiradas na Palavra de Deus."
-      >This section helps the user express emotions, receive spiritual guidance and connect with prayers inspired by the Word of God.</p>
+        <p data-en="This section helps the user express emotions, receive spiritual guidance and connect with prayers inspired by the Word of God."
+          data-es="Esta sección ayuda al usuario a expresar emociones, recibir guía espiritual y conectarse con oraciones inspiradas en la Palabra de Dios."
+          data-pt="Esta seção ajuda o usuário a expressar emoções, receber orientação espiritual e conectar-se com orações inspiradas na Palavra de Deus.">
+          This section helps the user express emotions, receive spiritual guidance and connect with prayers inspired by
+          the Word of God.</p>
 
-      <ul class="feature-list">
-        <li data-en="Guidance based on your emotional state" data-es="Guía según tu estado emocional" data-pt="Orientação de acordo com seu estado emocional">Guidance based on your emotional state</li>
-        <li data-en="Faith-centered support" data-es="Apoyo centrado en la fe" data-pt="Apoio centrado na fé">Faith-centered support</li>
-        <li data-en="Prayer suggestions in real time" data-es="Sugerencias de oración en tiempo real" data-pt="Sugestões de oração em tempo real">Prayer suggestions in real time</li>
-        <li data-en="Simple and private experience" data-es="Experiencia simple y privada" data-pt="Experiência simples e privada">Simple and private experience</li>
-      </ul>
+        <ul class="feature-list">
+          <li data-en="Guidance based on your emotional state" data-es="Guía según tu estado emocional"
+            data-pt="Orientação de acordo com seu estado emocional">Guidance based on your emotional state</li>
+          <li data-en="Faith-centered support" data-es="Apoyo centrado en la fe" data-pt="Apoio centrado na fé">
+            Faith-centered support</li>
+          <li data-en="Prayer suggestions in real time" data-es="Sugerencias de oración en tiempo real"
+            data-pt="Sugestões de oração em tempo real">Prayer suggestions in real time</li>
+          <li data-en="Simple and private experience" data-es="Experiencia simple y privada"
+            data-pt="Experiência simples e privada">Simple and private experience</li>
+        </ul>
 
-      <div class="feature-cta">
-        <a class="btn-primary" href="https://www.lightoflife.app/" target="_blank">
-          <span data-en="💬 Talk now" data-es="💬 Habla ahora" data-pt="💬 Fale agora">💬 Talk now</span>
-        </a>
+        <div class="feature-cta">
+          <a class="btn-primary" href="https://www.lightoflife.app/" target="_blank">
+            <span data-en="💬 Talk now" data-es="💬 Habla ahora" data-pt="💬 Fale agora">💬 Talk now</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="feature-shot">
+        <img id="ai-spiritual-counselor-image" src="/screenshots/en/ai-spiritual-counselor-en.png"
+          data-en="/screenshots/en/ai-spiritual-counselor-en.png"
+          data-es="/screenshots/es/ai-spiritual-counselor-es.png"
+          data-pt="/screenshots/pt/ai-spiritual-counselor-pt.png" alt="AI Spiritual Counselor Screen" />
       </div>
     </div>
+  </section>
+  <section class="feature-section alt">
+    <div class="feature-grid">
+      <div class="feature-copy">
+        <h3 class="feature-title" data-en="SPIRITUAL COMPANION 24/7" data-es="COMPAÑERO ESPIRITUAL 24/7"
+          data-pt="COMPANHEIRO ESPIRITUAL 24/7">SPIRITUAL COMPANION 24/7</h3>
 
-    <div class="feature-shot">
-      <img
-        id="ai-spiritual-counselor-image"
-        src="/screenshots/en/ai-spiritual-counselor-en.png"
-        data-en="/screenshots/en/ai-spiritual-counselor-en.png"
-        data-es="/screenshots/es/ai-spiritual-counselor-es.png"
-        data-pt="/screenshots/pt/ai-spiritual-counselor-pt.png"
-        alt="AI Spiritual Counselor Screen"
-      />
-    </div>
-  </div>
-</section>
-<section class="feature-section alt">
-  <div class="feature-grid">
-    <div class="feature-copy">
-      <h3
-        class="feature-title"
-        data-en="SPIRITUAL COMPANION 24/7"
-        data-es="COMPAÑERO ESPIRITUAL 24/7"
-        data-pt="COMPANHEIRO ESPIRITUAL 24/7"
-      >SPIRITUAL COMPANION 24/7</h3>
+        <h2 data-en="Continuous prayer, peace and the Word of God throughout your day"
+          data-es="Oración continua, paz y la Palabra de Dios durante todo tu día"
+          data-pt="Oração contínua, paz e a Palavra de Deus durante todo o seu dia">Continuous prayer, peace and the
+          Word of God throughout your day</h2>
 
-      <h2
-        data-en="Continuous prayer, peace and the Word of God throughout your day"
-        data-es="Oración continua, paz y la Palabra de Dios durante todo tu día"
-        data-pt="Oração contínua, paz e a Palavra de Deus durante todo o seu dia"
-      >Continuous prayer, peace and the Word of God throughout your day</h2>
+        <p data-en="This section keeps the user connected to a daily spiritual rhythm with quick access to moments of prayer, encouragement and faith."
+          data-es="Esta sección mantiene al usuario conectado a un ritmo espiritual diario con acceso rápido a momentos de oración, ánimo y fe."
+          data-pt="Esta seção mantém o usuário conectado a um ritmo espiritual diário com acesso rápido a momentos de oração, encorajamento e fé.">
+          This section keeps the user connected to a daily spiritual rhythm with quick access to moments of prayer,
+          encouragement and faith.</p>
 
-      <p
-        data-en="This section keeps the user connected to a daily spiritual rhythm with quick access to moments of prayer, encouragement and faith."
-        data-es="Esta sección mantiene al usuario conectado a un ritmo espiritual diario con acceso rápido a momentos de oración, ánimo y fe."
-        data-pt="Esta seção mantém o usuário conectado a um ritmo espiritual diário com acesso rápido a momentos de oração, encorajamento e fé."
-      >This section keeps the user connected to a daily spiritual rhythm with quick access to moments of prayer, encouragement and faith.</p>
+        <ul class="feature-list">
+          <li data-en="Prayer moments during the day" data-es="Momentos de oración durante el día"
+            data-pt="Momentos de oração ao longo do dia">Prayer moments during the day</li>
+          <li data-en="Fast access to spiritual support" data-es="Acceso rápido a apoyo espiritual"
+            data-pt="Acesso rápido ao apoio espiritual">Fast access to spiritual support</li>
+          <li data-en="Designed for peace and consistency" data-es="Diseñado para paz y constancia"
+            data-pt="Projetado para paz e constância">Designed for peace and consistency</li>
+        </ul>
 
-      <ul class="feature-list">
-        <li data-en="Prayer moments during the day" data-es="Momentos de oración durante el día" data-pt="Momentos de oração ao longo do dia">Prayer moments during the day</li>
-        <li data-en="Fast access to spiritual support" data-es="Acceso rápido a apoyo espiritual" data-pt="Acesso rápido ao apoio espiritual">Fast access to spiritual support</li>
-        <li data-en="Designed for peace and consistency" data-es="Diseñado para paz y constancia" data-pt="Projetado para paz e constância">Designed for peace and consistency</li>
-      </ul>
+        <div class="feature-cta">
+          <a class="btn-primary" href="https://www.lightoflife.app/" target="_blank">
+            <span data-en="🙏 Start now" data-es="🙏 Comienza ahora" data-pt="🙏 Comece agora">🙏 Start now</span>
+          </a>
+        </div>
+      </div>
 
-      <div class="feature-cta">
-        <a class="btn-primary" href="https://www.lightoflife.app/" target="_blank">
-          <span data-en="🙏 Start now" data-es="🙏 Comienza ahora" data-pt="🙏 Comece agora">🙏 Start now</span>
-        </a>
+      <div class="feature-shot">
+        <img id="spiritual-companion-image" src="/screenshots/en/spiritual-companion-en.png"
+          data-en="/screenshots/en/spiritual-companion-en.png" data-es="/screenshots/es/spiritual-companion-es.png"
+          data-pt="/screenshots/pt/spiritual-companion-pt.png" alt="Spiritual Companion Screen" />
       </div>
     </div>
+  </section>
+  <section class="feature-section">
+    <div class="feature-grid">
+      <div class="feature-copy">
+        <h3 class="feature-title" data-en="CATEGORIES" data-es="CATEGORÍAS" data-pt="CATEGORIAS">CATEGORIES</h3>
 
-    <div class="feature-shot">
-      <img
-        id="spiritual-companion-image"
-        src="/screenshots/en/spiritual-companion-en.png"
-        data-en="/screenshots/en/spiritual-companion-en.png"
-        data-es="/screenshots/es/spiritual-companion-es.png"
-        data-pt="/screenshots/pt/spiritual-companion-pt.png"
-        alt="Spiritual Companion Screen"
-      />
-    </div>
-  </div>
-</section>
-<section class="feature-section">
-  <div class="feature-grid">
-    <div class="feature-copy">
-      <h3
-        class="feature-title"
-        data-en="CATEGORIES"
-        data-es="CATEGORÍAS"
-        data-pt="CATEGORIAS"
-      >CATEGORIES</h3>
+        <h2 data-en="Explore prayers by moment, need and spiritual season"
+          data-es="Explora oraciones por momento, necesidad y temporada espiritual"
+          data-pt="Explore orações por momento, necessidade e estação espiritual">Explore prayers by moment, need and
+          spiritual season</h2>
 
-      <h2
-        data-en="Explore prayers by moment, need and spiritual season"
-        data-es="Explora oraciones por momento, necesidad y temporada espiritual"
-        data-pt="Explore orações por momento, necessidade e estação espiritual"
-      >Explore prayers by moment, need and spiritual season</h2>
+        <p data-en="The categories section helps the user quickly find the right prayer, whether for healing, family, gratitude, protection or a new beginning."
+          data-es="La sección de categorías ayuda al usuario a encontrar rápidamente la oración correcta, ya sea para sanación, familia, gratitud, protección o un nuevo comienzo."
+          data-pt="A seção de categorias ajuda o usuário a encontrar rapidamente a oração certa, seja para cura, família, gratidão, proteção ou um novo começo.">
+          The categories section helps the user quickly find the right prayer, whether for healing, family, gratitude,
+          protection or a new beginning.</p>
 
-      <p
-        data-en="The categories section helps the user quickly find the right prayer, whether for healing, family, gratitude, protection or a new beginning."
-        data-es="La sección de categorías ayuda al usuario a encontrar rápidamente la oración correcta, ya sea para sanación, familia, gratitud, protección o un nuevo comienzo."
-        data-pt="A seção de categorias ajuda o usuário a encontrar rapidamente a oração certa, seja para cura, família, gratidão, proteção ou um novo começo."
-      >The categories section helps the user quickly find the right prayer, whether for healing, family, gratitude, protection or a new beginning.</p>
+        <ul class="feature-list">
+          <li data-en="Organized by real life needs" data-es="Organizado por necesidades reales"
+            data-pt="Organizado por necessidades reais">Organized by real life needs</li>
+          <li data-en="Easy to browse and access" data-es="Fácil de explorar y acceder"
+            data-pt="Fácil de explorar e acessar">Easy to browse and access</li>
+          <li data-en="Designed for quick daily use" data-es="Diseñado para uso diario rápido"
+            data-pt="Projetado para uso diário rápido">Designed for quick daily use</li>
+        </ul>
 
-      <ul class="feature-list">
-        <li data-en="Organized by real life needs" data-es="Organizado por necesidades reales" data-pt="Organizado por necessidades reais">Organized by real life needs</li>
-        <li data-en="Easy to browse and access" data-es="Fácil de explorar y acceder" data-pt="Fácil de explorar e acessar">Easy to browse and access</li>
-        <li data-en="Designed for quick daily use" data-es="Diseñado para uso diario rápido" data-pt="Projetado para uso diário rápido">Designed for quick daily use</li>
-      </ul>
+        <div class="feature-cta">
+          <a class="btn-primary" href="https://www.lightoflife.app/" target="_blank">
+            <span data-en="📂 Explore categories" data-es="📂 Explora categorías" data-pt="📂 Explorar categorias">📂
+              Explore categories</span>
+          </a>
+        </div>
+      </div>
 
-      <div class="feature-cta">
-        <a class="btn-primary" href="https://www.lightoflife.app/" target="_blank">
-          <span data-en="📂 Explore categories" data-es="📂 Explora categorías" data-pt="📂 Explorar categorias">📂 Explore categories</span>
-        </a>
+      <div class="feature-shot">
+        <img id="categories-image" src="/screenshots/en/categories-en.png" data-en="/screenshots/en/categories-en.png"
+          data-es="/screenshots/es/categories-es.png" data-pt="/screenshots/pt/categories-pt.png"
+          alt="Categories Screen" />
       </div>
     </div>
+  </section>
+  <section class="feature-section alt">
+    <div class="feature-grid">
+      <div class="feature-copy">
+        <h3 class="feature-title" data-en="BIBLE ACADEMY" data-es="ACADEMIA BÍBLICA" data-pt="ACADEMIA BÍBLICA">BIBLE
+          ACADEMY</h3>
 
-    <div class="feature-shot">
-      <img
-        id="categories-image"
-        src="/screenshots/en/categories-en.png"
-        data-en="/screenshots/en/categories-en.png"
-        data-es="/screenshots/es/categories-es.png"
-        data-pt="/screenshots/pt/categories-pt.png"
-        alt="Categories Screen"
-      />
-    </div>
-  </div>
-</section>
-<section class="feature-section alt">
-  <div class="feature-grid">
-    <div class="feature-copy">
-      <h3
-        class="feature-title"
-        data-en="BIBLE ACADEMY"
-        data-es="ACADEMIA BÍBLICA"
-        data-pt="ACADEMIA BÍBLICA"
-      >BIBLE ACADEMY</h3>
+        <h2 data-en="Learn by playing with the Word of God" data-es="Aprende jugando con la Palabra de Dios"
+          data-pt="Aprenda brincando com a Palavra de Deus">Learn by playing with the Word of God</h2>
 
-      <h2
-        data-en="Learn by playing with the Word of God"
-        data-es="Aprende jugando con la Palabra de Dios"
-        data-pt="Aprenda brincando com a Palavra de Deus"
-      >Learn by playing with the Word of God</h2>
+        <p data-en="This section helps users grow in biblical knowledge through simple challenges, progress tracking and practical learning modes."
+          data-es="Esta sección ayuda al usuario a crecer en conocimiento bíblico mediante retos simples, seguimiento de progreso y modos prácticos de aprendizaje."
+          data-pt="Esta seção ajuda o usuário a crescer no conhecimento bíblico por meio de desafios simples, acompanhamento de progresso e modos práticos de aprendizado.">
+          This section helps users grow in biblical knowledge through simple challenges, progress tracking and practical
+          learning modes.</p>
 
-      <p
-        data-en="This section helps users grow in biblical knowledge through simple challenges, progress tracking and practical learning modes."
-        data-es="Esta sección ayuda al usuario a crecer en conocimiento bíblico mediante retos simples, seguimiento de progreso y modos prácticos de aprendizaje."
-        data-pt="Esta seção ajuda o usuário a crescer no conhecimento bíblico por meio de desafios simples, acompanhamento de progresso e modos práticos de aprendizado."
-      >This section helps users grow in biblical knowledge through simple challenges, progress tracking and practical learning modes.</p>
+        <ul class="feature-list">
+          <li data-en="Daily challenge system" data-es="Sistema de reto diario" data-pt="Sistema de desafio diário">
+            Daily challenge system</li>
+          <li data-en="Progress and streak tracking" data-es="Seguimiento de progreso y racha"
+            data-pt="Acompanhamento de progresso e sequência">Progress and streak tracking</li>
+          <li data-en="Interactive learning modes" data-es="Modos interactivos de aprendizaje"
+            data-pt="Modos interativos de aprendizado">Interactive learning modes</li>
+        </ul>
 
-      <ul class="feature-list">
-        <li data-en="Daily challenge system" data-es="Sistema de reto diario" data-pt="Sistema de desafio diário">Daily challenge system</li>
-        <li data-en="Progress and streak tracking" data-es="Seguimiento de progreso y racha" data-pt="Acompanhamento de progresso e sequência">Progress and streak tracking</li>
-        <li data-en="Interactive learning modes" data-es="Modos interactivos de aprendizaje" data-pt="Modos interativos de aprendizado">Interactive learning modes</li>
-      </ul>
+        <div class="feature-cta">
+          <a class="btn-primary" href="https://www.lightoflife.app/" target="_blank">
+            <span data-en="📖 Start the challenge" data-es="📖 Comenzar reto" data-pt="📖 Começar desafio">📖 Start the
+              challenge</span>
+          </a>
+        </div>
+      </div>
 
-      <div class="feature-cta">
-        <a class="btn-primary" href="https://www.lightoflife.app/" target="_blank">
-          <span data-en="📖 Start the challenge" data-es="📖 Comenzar reto" data-pt="📖 Começar desafio">📖 Start the challenge</span>
-        </a>
+      <div class="feature-shot">
+        <img id="bible-academy-image" src="/screenshots/en/bible-academy-en.png"
+          data-en="/screenshots/en/bible-academy-en.png" data-es="/screenshots/es/bible-academy-es.png"
+          data-pt="/screenshots/pt/bible-academy-pt.png" alt="Bible Academy Screen" />
       </div>
     </div>
-
-    <div class="feature-shot">
-      <img
-        id="bible-academy-image"
-        src="/screenshots/en/bible-academy-en.png"
-        data-en="/screenshots/en/bible-academy-en.png"
-        data-es="/screenshots/es/bible-academy-es.png"
-        data-pt="/screenshots/pt/bible-academy-pt.png"
-        alt="Bible Academy Screen"
-      />
-    </div>
-  </div>
-</section>
+  </section>
   <!-- FEATURES -->
   <section class="features">
-    <p class="section-label" data-en="Everything you need" data-es="Todo lo que necesitas" data-pt="Tudo que você precisa"></p>
+    <p class="section-label" data-en="Everything you need" data-es="Todo lo que necesitas"
+      data-pt="Tudo que você precisa"></p>
     <h2 class="section-title" data-en="Faith in your pocket" data-es="Fe en tu bolsillo" data-pt="Fé no seu bolso"></h2>
 
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">🙏</div>
         <h3 data-en="Daily Prayer" data-es="Oración Diaria" data-pt="Oração Diária"></h3>
-        <p data-en="Curated prayers for every moment — morning, night, gratitude, healing, and more. In Spanish, English, and Portuguese." data-es="Oraciones cuidadosamente seleccionadas para cada momento — mañana, noche, gratitud, sanación y más. En español, inglés y portugués." data-pt="Orações selecionadas para cada momento — manhã, noite, gratidão, cura e mais. Em espanhol, inglês e português."></p>
+        <p data-en="Curated prayers for every moment — morning, night, gratitude, healing, and more. In Spanish, English, and Portuguese."
+          data-es="Oraciones cuidadosamente seleccionadas para cada momento — mañana, noche, gratitud, sanación y más. En español, inglés y portugués."
+          data-pt="Orações selecionadas para cada momento — manhã, noite, gratidão, cura e mais. Em espanhol, inglês e português.">
+        </p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📖</div>
         <h3 data-en="Full Bible" data-es="Biblia Completa" data-pt="Bíblia Completa"></h3>
-        <p data-en="Browse all 66 books, every chapter and verse. Listen to any verse with a single tap using natural AI voice." data-es="Explora los 66 libros, cada capítulo y versículo. Escucha cualquier versículo con un solo toque usando voz de IA natural." data-pt="Navegue por todos os 66 livros, cada capítulo e verso. Ouça qualquer verso com um toque usando voz de IA natural."></p>
+        <p data-en="Browse all 66 books, every chapter and verse. Listen to any verse with a single tap using natural AI voice."
+          data-es="Explora los 66 libros, cada capítulo y versículo. Escucha cualquier versículo con un solo toque usando voz de IA natural."
+          data-pt="Navegue por todos os 66 livros, cada capítulo e verso. Ouça qualquer verso com um toque usando voz de IA natural.">
+        </p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🎧</div>
         <h3 data-en="Audio Prayers" data-es="Oraciones en Audio" data-pt="Orações em Áudio"></h3>
-        <p data-en="Listen to prayers anywhere — while driving, working, or resting. Background audio keeps playing when you lock your phone." data-es="Escucha oraciones en cualquier lugar — mientras conduces, trabajas o descansar. El audio de fondo sigue reproduciéndose cuando bloqueas tu teléfono." data-pt="Ouça orações em qualquer lugar — enquanto dirige, trabalha ou descansa. O áudio de fundo continua tocando quando você bloqueia seu telefone."></p>
+        <p data-en="Listen to prayers anywhere — while driving, working, or resting. Background audio keeps playing when you lock your phone."
+          data-es="Escucha oraciones en cualquier lugar — mientras conduces, trabajas o descansar. El audio de fondo sigue reproduciéndose cuando bloqueas tu teléfono."
+          data-pt="Ouça orações em qualquer lugar — enquanto dirige, trabalha ou descansa. O áudio de fundo continua tocando quando você bloqueia seu telefone.">
+        </p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🌍</div>
         <h3 data-en="3 Languages" data-es="3 Idiomas" data-pt="3 Idiomas"></h3>
-        <p data-en="Full support for Spanish, English, and Portuguese. The entire app switches instantly." data-es="Soporte completo para español, inglés y portugués. La aplicación completa cambia al instante." data-pt="Suporte completo para espanhol, inglês e português. Todo o aplicativo muda instantaneamente."></p>
+        <p data-en="Full support for Spanish, English, and Portuguese. The entire app switches instantly."
+          data-es="Soporte completo para español, inglés y portugués. La aplicación completa cambia al instante."
+          data-pt="Suporte completo para espanhol, inglês e português. Todo o aplicativo muda instantaneamente."></p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📲</div>
         <h3 data-en="Share Verses" data-es="Compartir Versículos" data-pt="Compartilhar Versículos"></h3>
-        <p data-en="Send beautiful verse cards to friends and family on WhatsApp, Instagram, or any platform." data-es="Envía hermosas tarjetas de versículos a amigos y familiares en WhatsApp, Instagram o cualquier plataforma." data-pt="Envie belos cartões de versículos para amigos e família no WhatsApp, Instagram ou qualquer plataforma."></p>
+        <p data-en="Send beautiful verse cards to friends and family on WhatsApp, Instagram, or any platform."
+          data-es="Envía hermosas tarjetas de versículos a amigos y familiares en WhatsApp, Instagram o cualquier plataforma."
+          data-pt="Envie belos cartões de versículos para amigos e família no WhatsApp, Instagram ou qualquer plataforma.">
+        </p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🏆</div>
         <h3 data-en="Bible Challenge" data-es="Desafío Bíblico" data-pt="Desafio Bíblico"></h3>
-        <p data-en="Test your knowledge with daily Bible quizzes. Earn wisdom points and grow your faith every day." data-es="Prueba tu conocimiento con cuestionarios bíblicos diarios. Gana puntos de sabiduría y haz crecer tu fe cada día." data-pt="Teste seu conhecimento com questionários bíblicos diários. Ganhe pontos de sabedoria e fortaleça sua fé todos os dias."></p>
+        <p data-en="Test your knowledge with daily Bible quizzes. Earn wisdom points and grow your faith every day."
+          data-es="Prueba tu conocimiento con cuestionarios bíblicos diarios. Gana puntos de sabiduría y haz crecer tu fe cada día."
+          data-pt="Teste seu conhecimento com questionários bíblicos diários. Ganhe pontos de sabedoria e fortaleça sua fé todos os dias.">
+        </p>
       </div>
     </div>
   </section>
@@ -1376,7 +1423,9 @@
   <section class="youtube-section">
     <p class="section-label" data-en="Watch & grow" data-es="Mira y crece" data-pt="Assista e cresça"></p>
     <h2 class="section-title" data-en="YouTube Channel" data-es="Canal de YouTube" data-pt="Canal do YouTube"></h2>
-    <p style="color: var(--white-70); font-size: 16px;" data-en="Daily devotionals, Bible teachings, and prayer guides." data-es="Devocionales diarios, enseñanzas bíblicas y guías de oración." data-pt="Devocionalais diários, ensinamentos bíblicos e guias de oração."></p>
+    <p style="color: var(--white-70); font-size: 16px;" data-en="Daily devotionals, Bible teachings, and prayer guides."
+      data-es="Devocionales diarios, enseñanzas bíblicas y guías de oración."
+      data-pt="Devocionalais diários, ensinamentos bíblicos e guias de oração."></p>
 
     <div class="youtube-grid">
       <a class="btn-youtube" href="https://www.youtube.com/@LightOfEternalLife" target="_blank">
@@ -1399,12 +1448,17 @@
   <!-- SHARE -->
   <section class="share-section">
     <p class="section-label" data-en="Spread the word" data-es="Corre la voz" data-pt="Espalhe a palavra"></p>
-    <h2 class="section-title" data-en="Share with friends" data-es="Comparte con amigos" data-pt="Compartilhe com amigos"></h2>
+    <h2 class="section-title" data-en="Share with friends" data-es="Comparte con amigos"
+      data-pt="Compartilhe com amigos"></h2>
 
     <div class="share-grid">
       <button class="btn-whatsapp" onclick="shareVerse()">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        <span data-en="Share Today's Verse" data-es="Compartir versículo de hoy" data-pt="Compartilhar versículo de hoje"></span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        <span data-en="Share Today's Verse" data-es="Compartir versículo de hoy"
+          data-pt="Compartilhar versículo de hoje"></span>
       </button>
     </div>
   </section>
@@ -1412,11 +1466,14 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">Light of <span>Life</span></div>
-    <p class="footer-sub" data-en="Your daily Christian companion" data-es="Tu compañero cristiano diario" data-pt="Seu companheiro cristão diário"></p>
+    <p class="footer-sub" data-en="Your daily Christian companion" data-es="Tu compañero cristiano diario"
+      data-pt="Seu companheiro cristão diário"></p>
     <div class="footer-links">
       <a href="mailto:lightofeternallifes@gmail.com" data-en="Contact" data-es="Contacto" data-pt="Contato"></a>
-      <a href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800" target="_blank" data-en="App Store" data-es="App Store" data-pt="App Store"></a>
-      <a href="https://www.youtube.com/@LightOfEternalLife" target="_blank" data-en="YouTube" data-es="YouTube" data-pt="YouTube"></a>
+      <a href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800" target="_blank"
+        data-en="App Store" data-es="App Store" data-pt="App Store"></a>
+      <a href="https://www.youtube.com/@LightOfEternalLife" target="_blank" data-en="YouTube" data-es="YouTube"
+        data-pt="YouTube"></a>
     </div>
     <p class="footer-copy">© 2026 Light of Life. All rights reserved.</p>
   </footer>
@@ -1426,39 +1483,39 @@
     let currentLanguage = 'en';
 
     function setLanguage(lang) {
-  currentLanguage = lang;
-  localStorage.setItem('language', lang);
-  
-  // Update active button
-  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-  event.target.classList.add('active');
-  
-  // Update all elements with data attributes
-  document.querySelectorAll('[data-en]').forEach(el => {
-    const key = `data-${lang}`;
-    if (el.hasAttribute(key)) {
-      if (el.tagName === 'A' || el.tagName === 'BUTTON') {
-        el.textContent = el.getAttribute(key);
-      } else {
-        el.textContent = el.getAttribute(key);
-      }
-    }
-  });
+      currentLanguage = lang;
+      localStorage.setItem('language', lang);
 
-  // Update images by language
-  const images = document.querySelectorAll("img[data-en][data-es][data-pt]");
-  images.forEach((img) => {
-    const newSrc = img.getAttribute(`data-${lang}`);
-    if (newSrc) {
-      img.src = newSrc;
+      // Update active button
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // Update all elements with data attributes
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const key = `data-${lang}`;
+        if (el.hasAttribute(key)) {
+          if (el.tagName === 'A' || el.tagName === 'BUTTON') {
+            el.textContent = el.getAttribute(key);
+          } else {
+            el.textContent = el.getAttribute(key);
+          }
+        }
+      });
+
+      // Update images by language
+      const images = document.querySelectorAll("img[data-en][data-es][data-pt]");
+      images.forEach((img) => {
+        const newSrc = img.getAttribute(`data-${lang}`);
+        if (newSrc) {
+          img.src = newSrc;
+        }
+      });
     }
-  });
-}
 
     // Load saved language
     const savedLanguage = localStorage.getItem('language') || 'en';
     currentLanguage = savedLanguage;
-    
+
     // Apply language on load
     window.addEventListener('load', () => {
       document.querySelectorAll('[data-en]').forEach(el => {
@@ -1467,7 +1524,7 @@
           el.textContent = el.getAttribute(key);
         }
       });
-      
+
       // Update active button
       if (savedLanguage !== 'en') {
         document.querySelectorAll('.lang-btn').forEach((btn, idx) => {
@@ -1530,7 +1587,7 @@
         pt: "Light of Life - Oração diária e versículos bíblicos"
       };
       const title = titles[currentLanguage] || titles.en;
-      
+
       if (navigator.share) {
         navigator.share({
           title: title,
@@ -1541,7 +1598,7 @@
         });
         return;
       }
-      
+
       intentarCopiarAlPortapapeles(url);
     }
 
@@ -1566,73 +1623,80 @@
       };
       prompt(messages[currentLanguage] || messages.en, url);
     }
-    </script>
+  </script>
   <div id="donationModal" class="donation-modal hidden">
-  <div class="donation-box">
+    <div class="donation-box">
 
-    <h2>❤️ Support this mission</h2>
-    <p>Your support keeps this light alive.</p>
+      <h2>❤️ Support this mission</h2>
+      <p>Your support keeps this light alive.</p>
 
-    <div class="donation-options">
-  <button onclick="selectAmount(5, this)">$5</button>
-  <button onclick="selectAmount(10, this)">$10</button>
-  <button onclick="selectAmount(20, this)">$20</button>
-  <button onclick="selectAmount(50, this)">$50</button>
-  <button onclick="selectAmount('custom', this)">Custom</button>
-</div>
+      <div class="donation-options">
+        <button onclick="selectAmount(5, this)">$5</button>
+        <button onclick="selectAmount(10, this)">$10</button>
+        <button onclick="selectAmount(20, this)">$20</button>
+        <button onclick="selectAmount(50, this)">$50</button>
+        <button onclick="selectAmount('custom', this)">Custom</button>
+      </div>
+      <button class="donate-main" onclick="confirmDonation()">Continue</button>
+    </div>
   </div>
-</div>
-<script>
-let selectedAmount = 5;
+  <script>
+    let selectedAmount = 5;
 
-const DONATION_LINKS = {
-  5: "https://donate.stripe.com/fZu5kw5O5b536ZneEG9Zm04",
-  10: "https://donate.stripe.com/8x214ga4lb532J7bsu9Zm03",
-  20: "https://donate.stripe.com/00w9AM3FXa0ZfvTfIK9Zm05",
-  50: "https://donate.stripe.com/bJe14g6S97SRgzX0NQ9Zm06",
-  custom: "https://donate.stripe.com/bJe00c5O57SRcjHcwy9Zm00"
-};
+    const DONATION_LINKS = {
+      5: "https://donate.stripe.com/fZu5kw5O5b536ZneEG9Zm04",
+      10: "https://donate.stripe.com/8x214ga4lb532J7bsu9Zm03",
+      20: "https://donate.stripe.com/00w9AM3FXa0ZfvTfIK9Zm05",
+      50: "https://donate.stripe.com/bJe14g6S97SRgzX0NQ9Zm06",
+      custom: "https://donate.stripe.com/bJe00c5O57SRcjHcwy9Zm00"
+    };
 
-function openDonationModal() {
-  document.getElementById("donationModal").classList.remove("hidden");
-}
+    function openDonationModal() {
+      document.getElementById("donationModal").classList.remove("hidden");
+    }
 
-function closeDonationModal() {
-  document.getElementById("donationModal").classList.add("hidden");
-}
+    function closeDonationModal() {
+      document.getElementById("donationModal").classList.add("hidden");
+    }
 
-function selectAmount(amount, el) {
-  selectedAmount = amount;
+    function selectAmount(amount, el) {
+      selectedAmount = amount;
 
-  document.querySelectorAll('.donation-options button').forEach(btn => {
-    btn.classList.remove('active');
-  });
+      document.querySelectorAll('.donation-options button').forEach(btn => {
+        btn.classList.remove('active');
+      });
 
-  if (el) {
-    el.classList.add('active');
+      if (el) {
+        el.classList.add('active');
+      }
+    }
+
+    function selectAmount(amount, el) {
+      selectedAmount = amount;
+
+      document.querySelectorAll('.donation-options button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      if (el) {
+        el.classList.add('active');
+      }
+    }
+
+    function confirmDonation() {
+  console.log("Selected:", selectedAmount);
+
+  const link = DONATION_LINKS[selectedAmount];
+  console.log("Link:", link);
+
+  if (!link) {
+    alert("Donation link not found.");
+    return;
   }
+
+  window.location.href = link;
 }
-
-function selectAmount(amount, el) {
-  selectedAmount = amount;
-
-  document.querySelectorAll('.donation-options button').forEach(btn => {
-    btn.classList.remove('active');
-  });
-
-  if (el) {
-    el.classList.add('active');
-  }
-  function confirmDonationDirect(amount) {
-    const link = DONATION_LINKS[amount];
-
-    if (!link) {
-      alert("Donation link not found.");
-      return;
-  }
-
-  window.open(link, "_blank");
-}
-</script>
+  </script>
 </body>
+
 </html>
