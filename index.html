@@ -766,6 +766,81 @@
     .hidden {
       display: none !important;
     }
+    @media (max-width: 768px) {
+  .hero {
+    padding: 36px 20px 56px;
+    gap: 0;
+  }
+
+  .language-selector {
+    margin: 0 auto 18px;
+    width: fit-content;
+    transform: scale(0.96);
+    transform-origin: center;
+  }
+
+  .badge {
+    margin: 0 auto 18px;
+    width: fit-content;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 10vw, 58px);
+    line-height: 0.98;
+    letter-spacing: -1.5px;
+    margin-bottom: 18px;
+  }
+
+  .hero-sub {
+    max-width: 92%;
+    margin: 0 auto 0;
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.78);
+  }
+
+  .hero-phone-real {
+    margin: 28px 0 26px 0;
+  }
+
+  .hero-phone-real img {
+    max-width: 340px;
+    border-radius: 34px;
+    box-shadow:
+      0 24px 70px rgba(0,0,0,0.38),
+      0 0 0 1px rgba(255,255,255,0.04);
+  }
+
+  .cta-group {
+    gap: 14px;
+    margin-top: 0;
+  }
+
+  .cta-group .btn-primary,
+  .cta-group .btn-secondary,
+  .cta-group .btn-whatsapp,
+  .cta-group button {
+    min-height: 64px;
+    border-radius: 22px;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+  }
+
+  .btn-primary {
+    box-shadow: 0 16px 36px rgba(212,170,73,0.22);
+  }
+
+  .btn-secondary {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.22);
+    backdrop-filter: blur(10px);
+  }
+
+  .btn-whatsapp {
+    box-shadow: 0 14px 30px rgba(0,0,0,0.16);
+  }
+}
   </style>
 </head>
 <body>
