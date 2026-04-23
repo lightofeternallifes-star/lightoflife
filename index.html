@@ -43,97 +43,59 @@
       overflow-x: hidden;
     }
 
-    /* LANGUAGE SELECTOR */
-    .language-selector {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-      display: flex;
-      gap: 8px;
-      background: rgba(15, 38, 69, 0.8);
-      border: 1px solid rgba(212, 168, 79, 0.3);
-      border-radius: 12px;
-      padding: 8px;
-      backdrop-filter: blur(10px);
-    }
+    /* — HERO NUEVO — */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
 
-    .lang-btn {
-      padding: 8px 14px;
-      border: none;
-      border-radius: 8px;
-      background: transparent;
-      color: var(--white-70);
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-      transition: all 0.2s;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
+.hero-copy {
+  max-width: 520px;
+}
 
-    .lang-btn.active {
-      background: var(--gold);
-      color: #000;
-    }
+.hero h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
 
-    .lang-btn:hover {
-      color: var(--white);
-    }
+.hero-sub {
+  font-size: 18px;
+  color: var(--white-70);
+  margin-bottom: 30px;
+}
 
-    /* HERO */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 60px;
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-    }
+.hero-phone-real img {
+  width: 360px;
+  border-radius: 30px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+}
 
-    .hero-copy {
-      max-width: 520px;
-    }
+.cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
-    .hero h1 {
-      font-size: 42px;
-      line-height: 1.2;
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .hero-sub {
-      font-size: 18px;
-      color: var(--white-70);
-      margin-bottom: 30px;
-    }
-
-    .hero-phone-real img {
-      width: 360px;
-      border-radius: 30px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.5);
-    }
-
-    .cta-group {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero-phone-real img {
-        width: 300px;
-        margin-top: 30px;
-      }
-    }
-
+  .hero-phone-real img {
+    width: 300px;
+    margin-top: 30px;
+  }
+}
     .hero::before {
       content: '';
       position: absolute;
@@ -307,7 +269,7 @@
 
     .btn-whatsapp:hover { background: rgba(37,211,102,0.2); }
 
-    /* FEATURES */
+    /* ── FEATURES ── */
     .features {
       padding: 80px 24px;
       max-width: 1000px;
@@ -368,7 +330,7 @@
       line-height: 1.6;
     }
 
-    /* DIVIDER */
+    /* ── DIVIDER ── */
     .divider {
       width: 100%;
       max-width: 600px;
@@ -377,7 +339,7 @@
       background: linear-gradient(90deg, transparent, var(--white-30), transparent);
     }
 
-    /* YOUTUBE */
+    /* ── YOUTUBE ── */
     .youtube-section {
       padding: 80px 24px;
       text-align: center;
@@ -418,7 +380,7 @@
       font-size: 20px;
     }
 
-    /* SHARE */
+    /* ── SHARE ── */
     .share-section {
       padding: 0 24px 80px;
       max-width: 600px;
@@ -433,7 +395,7 @@
       margin-top: 32px;
     }
 
-    /* FOOTER */
+    /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--white-10);
       padding: 40px 24px;
@@ -652,159 +614,183 @@
         order: unset;
       }
     }
-
-    .hidden {
-      display: none !important;
-    }
   </style>
 </head>
 <body>
 
-  <!-- LANGUAGE SELECTOR -->
-  <div class="language-selector">
-    <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
-    <button class="lang-btn" onclick="setLanguage('es')">ES</button>
-    <button class="lang-btn" onclick="setLanguage('pt')">PT</button>
-  </div>
-
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-glow"></div>
+  <div class="hero-glow"></div>
 
-    <div class="hero-copy">
-      <div class="badge">
-        <span class="badge-dot"></span>
-        <span data-en="Available on App Store" data-es="Disponible en App Store" data-pt="Disponível na App Store"></span>
+  <div class="hero-copy">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Disponible en App Store
+    </div>
+
+   <h1>Encuentra paz, Ayuda Comunitaria y respuesta en un solo lugar.</h1>
+
+    <p class="hero-sub">
+  Light of Life es tu guía espiritual diaria. Ora, escucha, aprende y encuentra
+  Ayuda Comunitaria, Biblia, Consejero Espiritual IA y herramientas pensadas
+  para acompañarte cada día.
+</p>
+
+    <div class="cta-group">
+      <a
+        class="btn-primary"
+        href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800?l=es-MX"
+        target="_blank"
+      >
+        Download on the App Store
+      </a>
+
+      <a
+        class="btn-secondary"
+        href="https://lightoflife.app/verse/john/3/16"
+      >
+        Read Today's Verse
+      </a>
+
+      <button class="btn-whatsapp" onclick="shareApp()">
+        Share App on WhatsApp
+      </button>
+
+      <button class="btn-primary" id="sharePageBtn" onclick="sharePage()">
+        Share this page
+      </button>
+    </div>
+  </div>
+
+  <div class="hero-phone-real">
+    <img
+      src="./screenshots/home-main.png"
+      alt="Pantalla principal de Light of Life"
+    />
+  </div>
+</section>
+
+<!-- AYUDA COMUNITARIA -->
+<section class="feature-section alt">
+  <div class="feature-grid">
+    <div class="feature-copy">
+      <div class="feature-cta">
+        <a 
+          href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800" 
+          target="_blank" 
+          class="btn-primary"
+        >
+          🙏 Explorar ayuda disponible
+        </a>
       </div>
+      <h3 class="feature-title">AYUDA COMUNITARIA</h3>
+      <h2>Encuentra ayuda real en tu momento más difícil</h2>
+      <p>
+        Esta sección conecta a las personas con ayuda concreta en su comunidad.
+        No solo inspira: también orienta hacia comida, ropa, apoyo cercano y
+        recursos reales para momentos difíciles.
+      </p>
 
-      <h1>
-        <span data-en="Find peace, Community Aid and answers in one place." data-es="Encuentra paz, Ayuda Comunitaria y respuesta en un solo lugar." data-pt="Encontre paz, Ajuda Comunitária e respostas em um único lugar."></span>
-      </h1>
+      <ul class="feature-list">
+        <li>Encuentra ayuda cerca de ti</li>
+        <li>Accede a recursos reales y útiles</li>
+        <li>Recibe apoyo con una experiencia clara</li>
+        <li>Conecta fe con acción concreta</li>
+      </ul>
+      <div class="feature-cta">
+        <a 
+          href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800" 
+          target="_blank" 
+          class="btn-primary"
+        >
+          🆘 Ayuda urgente
+        </a>
+      </div>
+    </div>
 
-      <p class="hero-sub" data-en="Light of Life is your daily spiritual guide. Pray, listen, learn and find Community Aid, Bible, AI Spiritual Counselor and tools designed to accompany you every day." data-es="Light of Life es tu guía espiritual diaria. Ora, escucha, aprende y encuentra Ayuda Comunitaria, Biblia, Consejero Espiritual IA y herramientas pensadas para acompañarte cada día." data-pt="Light of Life é seu guia espiritual diário. Ore, ouça, aprenda e encontre Ajuda Comunitária, Bíblia, Conselheiro Espiritual com IA e ferramentas projetadas para acompanhá-lo todos os dias."></p>
+    <div class="feature-shot">
+      <img
+        src="./screenshots/ayuda-testimonios.png"
+        alt="Pantalla de Ayuda Comunitaria de Light of Life"
+      />
+    </div>
+  </div>
+</section>
 
-      <div class="cta-group">
-        <a class="btn-primary" href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800?l=es-MX" target="_blank">
-          <span data-en="Download on the App Store" data-es="Descargar en la App Store" data-pt="Baixar na App Store"></span>
+<!-- PALABRA DE DIOS -->
+<section class="feature-section">
+  <div class="feature-grid">
+    <div class="feature-copy">
+      <h3 class="feature-title">PALABRA DE DIOS</h3>
+      <h2>Lee, escucha y medita en la Palabra de Dios</h2>
+      <p>
+        Esta sección ayuda al usuario a acercarse a la Biblia de una manera
+        clara, moderna y fácil de usar. Puede leer versículos, escucharlos en
+        audio y reflexionar sin sentirse perdido.
+      </p>
+
+      <ul class="feature-list">
+        <li>Lee versículos con diseño limpio y claro</li>
+        <li>Escucha la Palabra en audio</li>
+        <li>Comparte fácilmente con otros</li>
+        <li>Accede rápido a reflexión bíblica</li>
+      </ul>
+      <div class="feature-cta">
+        <a href="https://www.lightoflife.app/" target="_blank" class="btn-primary">
+          📖 Leer la Biblia ahora
         </a>
 
-        <a class="btn-secondary" href="https://lightoflife.app/verse/john/3/16">
-          <span data-en="Read Today's Verse" data-es="Leer versículo de hoy" data-pt="Ler versículo de hoje"></span>
+        <a href="https://www.lightoflife.app/" target="_blank" class="btn-secondary">
+          🎧 Escuchar versículo de hoy
         </a>
-
-        <button class="btn-whatsapp" onclick="shareApp()">
-          <span data-en="Share App on WhatsApp" data-es="Compartir app en WhatsApp" data-pt="Compartilhar app no WhatsApp"></span>
-        </button>
-
-        <button class="btn-primary" id="sharePageBtn" onclick="sharePage()">
-          <span data-en="Share this page" data-es="Compartir esta página" data-pt="Compartilhar esta página"></span>
-        </button>
       </div>
     </div>
 
-    <div class="hero-phone-real">
-      <img src="./screenshots/home-main.png" alt="Light of Life Home Screen" />
+    <div class="feature-shot">
+      <img
+        src="./screenshots/palabra-dios.png"
+        alt="Pantalla Palabra de Dios de Light of Life"
+      />
     </div>
-  </section>
-
-  <!-- COMMUNITY AID -->
-  <section class="feature-section alt">
-    <div class="feature-grid">
-      <div class="feature-copy">
-        <div class="feature-cta">
-          <a class="btn-primary" href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800" target="_blank">
-            🙏 <span data-en="Explore available help" data-es="Explorar ayuda disponible" data-pt="Explorar ajuda disponível"></span>
-          </a>
-        </div>
-        <h3 class="feature-title" data-en="Community Aid" data-es="Ayuda Comunitaria" data-pt="Ajuda Comunitária"></h3>
-        <h2 data-en="Find real help in your most difficult moment" data-es="Encuentra ayuda real en tu momento más difícil" data-pt="Encontre ajuda real em seu momento mais difícil"></h2>
-        <p data-en="This section connects people with concrete help in their community. It doesn't just inspire: it also guides towards food, clothing, nearby support and real resources for difficult times." data-es="Esta sección conecta a las personas con ayuda concreta en su comunidad. No solo inspira: también orienta hacia comida, ropa, apoyo cercano y recursos reales para momentos difíciles." data-pt="Esta seção conecta pessoas com ajuda concreta em sua comunidade. Não apenas inspira: também orienta para alimentos, roupas, apoio próximo e recursos reais para momentos difíceis."></p>
-
-        <ul class="feature-list">
-          <li data-en="Find help near you" data-es="Encuentra ayuda cerca de ti" data-pt="Encontre ajuda perto de você"></li>
-          <li data-en="Access real and useful resources" data-es="Accede a recursos reales y útiles" data-pt="Acesse recursos reais e úteis"></li>
-          <li data-en="Receive support with a clear experience" data-es="Recibe apoyo con una experiencia clara" data-pt="Receba suporte com uma experiência clara"></li>
-          <li data-en="Connect faith with concrete action" data-es="Conecta fe con acción concreta" data-pt="Conecte fé com ação concreta"></li>
-        </ul>
-        <div class="feature-cta">
-          <a class="btn-primary" href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800" target="_blank">
-            🆘 <span data-en="Urgent help" data-es="Ayuda urgente" data-pt="Ajuda urgente"></span>
-          </a>
-        </div>
-      </div>
-
-      <div class="feature-shot">
-        <img src="./screenshots/ayuda-testimonios.png" alt="Community Aid Screen" />
-      </div>
-    </div>
-  </section>
-
-  <!-- WORD OF GOD -->
-  <section class="feature-section">
-    <div class="feature-grid">
-      <div class="feature-copy">
-        <h3 class="feature-title" data-en="Word of God" data-es="Palabra de Dios" data-pt="Palavra de Deus"></h3>
-        <h2 data-en="Read, listen and meditate on God's Word" data-es="Lee, escucha y medita en la Palabra de Dios" data-pt="Leia, ouça e medite na Palavra de Deus"></h2>
-        <p data-en="This section helps the user approach the Bible in a clear, modern and easy-to-use way. You can read verses, listen to them in audio and reflect without feeling lost." data-es="Esta sección ayuda al usuario a acercarse a la Biblia de una manera clara, moderna y fácil de usar. Puede leer versículos, escucharlos en audio y reflexionar sin sentirse perdido." data-pt="Esta seção ajuda o usuário a se aproximar da Bíblia de forma clara, moderna e fácil de usar. Você pode ler versículos, ouvi-los em áudio e refletir sem se sentir perdido."></p>
-
-        <ul class="feature-list">
-          <li data-en="Read verses with clean and clear design" data-es="Lee versículos con diseño limpio y claro" data-pt="Leia versículos com design limpo e claro"></li>
-          <li data-en="Listen to God's Word in audio" data-es="Escucha la Palabra en audio" data-pt="Ouça a Palavra em áudio"></li>
-          <li data-en="Share easily with others" data-es="Comparte fácilmente con otros" data-pt="Compartilhe facilmente com outros"></li>
-          <li data-en="Quick access to biblical reflection" data-es="Acceso rápido a reflexión bíblica" data-pt="Acesso rápido à reflexão bíblica"></li>
-        </ul>
-        <div class="feature-cta">
-          <a href="https://www.lightoflife.app/" target="_blank" class="btn-primary">
-            📖 <span data-en="Read the Bible now" data-es="Leer la Biblia ahora" data-pt="Ler a Bíblia agora"></span>
-          </a>
-
-          <a href="https://www.lightoflife.app/" target="_blank" class="btn-secondary">
-            🎧 <span data-en="Listen to today's verse" data-es="Escuchar versículo de hoy" data-pt="Ouça versículo de hoje"></span>
-          </a>
-        </div>
-      </div>
-
-      <div class="feature-shot">
-        <img src="./screenshots/palabra-dios.png" alt="Word of God Screen" />
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
+  
 
   <!-- FEATURES -->
   <section class="features">
-    <p class="section-label" data-en="Everything you need" data-es="Todo lo que necesitas" data-pt="Tudo que você precisa"></p>
-    <h2 class="section-title" data-en="Faith in your pocket" data-es="Fe en tu bolsillo" data-pt="Fé no seu bolso"></h2>
+    <p class="section-label">Everything you need</p>
+    <h2 class="section-title">Faith in your pocket</h2>
 
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">🙏</div>
-        <h3 data-en="Daily Prayer" data-es="Oración Diaria" data-pt="Oração Diária"></h3>
-        <p data-en="Curated prayers for every moment — morning, night, gratitude, healing, and more. In Spanish, English, and Portuguese." data-es="Oraciones cuidadosamente seleccionadas para cada momento — mañana, noche, gratitud, sanación y más. En español, inglés y portugués." data-pt="Orações selecionadas para cada momento — manhã, noite, gratidão, cura e mais. Em espanhol, inglês e português."></p>
+        <h3>Daily Prayer</h3>
+        <p>Curated prayers for every moment — morning, night, gratitude, healing, and more. In Spanish, English, and Portuguese.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📖</div>
-        <h3 data-en="Full Bible" data-es="Biblia Completa" data-pt="Bíblia Completa"></h3>
-        <p data-en="Browse all 66 books, every chapter and verse. Listen to any verse with a single tap using natural AI voice." data-es="Explora los 66 libros, cada capítulo y versículo. Escucha cualquier versículo con un solo toque usando voz de IA natural." data-pt="Navegue por todos os 66 livros, cada capítulo e verso. Ouça qualquer verso com um toque usando voz de IA natural."></p>
+        <h3>Full Bible</h3>
+        <p>Browse all 66 books, every chapter and verse. Listen to any verse with a single tap using natural AI voice.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🎧</div>
-        <h3 data-en="Audio Prayers" data-es="Oraciones en Audio" data-pt="Orações em Áudio"></h3>
-        <p data-en="Listen to prayers anywhere — while driving, working, or resting. Background audio keeps playing when you lock your phone." data-es="Escucha oraciones en cualquier lugar — mientras conduces, trabajas o descansar. El audio de fondo sigue reproduciéndose cuando bloqueas tu teléfono." data-pt="Ouça orações em qualquer lugar — enquanto dirige, trabalha ou descansa. O áudio de fundo continua tocando quando você bloqueia seu telefone."></p>
+        <h3>Audio Prayers</h3>
+        <p>Listen to prayers anywhere — while driving, working, or resting. Background audio keeps playing when you lock your phone.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🌍</div>
-        <h3 data-en="3 Languages" data-es="3 Idiomas" data-pt="3 Idiomas"></h3>
-        <p data-en="Full support for Spanish, English, and Portuguese. The entire app switches instantly." data-es="Soporte completo para español, inglés y portugués. La aplicación completa cambia al instante." data-pt="Suporte completo para espanhol, inglês e português. Todo o aplicativo muda instantaneamente."></p>
+        <h3>3 Languages</h3>
+        <p>Full support for Spanish, English, and Portuguese. The entire app switches instantly.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📲</div>
-        <h3 data-en="Share Verses" data-es="Compartir Versículos" data-pt="Compartilhar Versículos"></h3>
-        <p data-en="Send beautiful verse cards to friends and family on WhatsApp, Instagram, or any platform." data-es="Envía hermosas tarjetas de versículos a amigos y familiares en WhatsApp, Instagram o cualquier plataforma." data-pt="Envie belos cartões de versículos para amigos e família no WhatsApp, Instagram ou qualquer plataforma."></p>
+        <h3>Share Verses</h3>
+        <p>Send beautiful verse cards to friends and family on WhatsApp, Instagram, or any platform.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🏆</div>
-        <h3 data-en="Bible Challenge" data-es="Desafío Bíblico" data-pt="Desafio Bíblico"></h3>
-        <p data-en="Test your knowledge with daily Bible quizzes. Earn wisdom points and grow your faith every day." data-es="Prueba tu conocimiento con cuestionarios bíblicos diarios. Gana puntos de sabiduría y haz crecer tu fe cada día." data-pt="Teste seu conhecimento com questionários bíblicos diários. Ganhe pontos de sabedoria e fortaleça sua fé todos os dias."></p>
+        <h3>Bible Challenge</h3>
+        <p>Test your knowledge with daily Bible quizzes. Earn wisdom points and grow your faith every day.</p>
       </div>
     </div>
   </section>
@@ -813,22 +799,22 @@
 
   <!-- YOUTUBE -->
   <section class="youtube-section">
-    <p class="section-label" data-en="Watch & grow" data-es="Mira y crece" data-pt="Assista e cresça"></p>
-    <h2 class="section-title" data-en="YouTube Channel" data-es="Canal de YouTube" data-pt="Canal do YouTube"></h2>
-    <p style="color: var(--white-70); font-size: 16px;" data-en="Daily devotionals, Bible teachings, and prayer guides." data-es="Devocionales diarios, enseñanzas bíblicas y guías de oración." data-pt="Devocionalais diários, ensinamentos bíblicos e guias de oração."></p>
+    <p class="section-label">Watch & grow</p>
+    <h2 class="section-title">YouTube Channel</h2>
+    <p style="color: var(--white-70); font-size: 16px;">Daily devotionals, Bible teachings, and prayer guides.</p>
 
     <div class="youtube-grid">
       <a class="btn-youtube" href="https://www.youtube.com/@LightOfEternalLife" target="_blank">
         <span class="yt-icon">▶</span>
-        🇺🇸 <span data-en="English Channel" data-es="Canal en inglés" data-pt="Canal em inglês"></span>
+        🇺🇸 English Channel
       </a>
       <a class="btn-youtube" href="https://www.youtube.com/@LuzdeVidaEterna-c8r" target="_blank">
         <span class="yt-icon">▶</span>
-        🇪🇸 <span data-en="Spanish Channel" data-es="Canal en español" data-pt="Canal em espanhol"></span>
+        🇪🇸 Canal en Español
       </a>
       <a class="btn-youtube" href="https://www.youtube.com/@LuzDeVidaEternaPT" target="_blank">
         <span class="yt-icon">▶</span>
-        🇧🇷 <span data-en="Portuguese Channel" data-es="Canal en portugués" data-pt="Canal em português"></span>
+        🇧🇷 Canal em Português
       </a>
     </div>
   </section>
@@ -837,13 +823,13 @@
 
   <!-- SHARE -->
   <section class="share-section">
-    <p class="section-label" data-en="Spread the word" data-es="Corre la voz" data-pt="Espalhe a palavra"></p>
-    <h2 class="section-title" data-en="Share with friends" data-es="Comparte con amigos" data-pt="Compartilhe com amigos"></h2>
+    <p class="section-label">Spread the word</p>
+    <h2 class="section-title">Share with friends</h2>
 
     <div class="share-grid">
       <button class="btn-whatsapp" onclick="shareVerse()">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        <span data-en="Share Today's Verse" data-es="Compartir versículo de hoy" data-pt="Compartilhar versículo de hoje"></span>
+        Share Today's Verse
       </button>
     </div>
   </section>
@@ -851,63 +837,17 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">Light of <span>Life</span></div>
-    <p class="footer-sub" data-en="Your daily Christian companion" data-es="Tu compañero cristiano diario" data-pt="Seu companheiro cristão diário"></p>
+    <p class="footer-sub">Your daily Christian companion</p>
     <div class="footer-links">
-      <a href="mailto:lightofeternallifes@gmail.com" data-en="Contact" data-es="Contacto" data-pt="Contato"></a>
-      <a href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800" target="_blank" data-en="App Store" data-es="App Store" data-pt="App Store"></a>
-      <a href="https://www.youtube.com/@LightOfEternalLife" target="_blank" data-en="YouTube" data-es="YouTube" data-pt="YouTube"></a>
+      <a href="mailto:lightofeternallifes@gmail.com">Contact</a>
+      <a href="https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800" target="_blank">App Store</a>
+      <a href="https://www.youtube.com/@LightOfEternalLife" target="_blank">YouTube</a>
     </div>
     <p class="footer-copy">© 2026 Light of Life. All rights reserved.</p>
   </footer>
 
   <script>
     const APP_STORE = "https://apps.apple.com/us/app/light-of-life-christian-prayer/id6757895800";
-    let currentLanguage = 'en';
-
-    function setLanguage(lang) {
-      currentLanguage = lang;
-      localStorage.setItem('language', lang);
-      
-      // Update active button
-      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-      
-      // Update all elements with data attributes
-      document.querySelectorAll('[data-en]').forEach(el => {
-        const key = `data-${lang}`;
-        if (el.hasAttribute(key)) {
-          if (el.tagName === 'A' || el.tagName === 'BUTTON') {
-            el.textContent = el.getAttribute(key);
-          } else {
-            el.textContent = el.getAttribute(key);
-          }
-        }
-      });
-    }
-
-    // Load saved language
-    const savedLanguage = localStorage.getItem('language') || 'en';
-    currentLanguage = savedLanguage;
-    
-    // Apply language on load
-    window.addEventListener('load', () => {
-      document.querySelectorAll('[data-en]').forEach(el => {
-        const key = `data-${savedLanguage}`;
-        if (el.hasAttribute(key)) {
-          el.textContent = el.getAttribute(key);
-        }
-      });
-      
-      // Update active button
-      if (savedLanguage !== 'en') {
-        document.querySelectorAll('.lang-btn').forEach((btn, idx) => {
-          btn.classList.remove('active');
-          if ((savedLanguage === 'es' && idx === 1) || (savedLanguage === 'pt' && idx === 2)) {
-            btn.classList.add('active');
-          }
-        });
-      }
-    });
 
     function parseSlug() {
       const path = window.location.pathname.replace("/", "");
@@ -933,33 +873,17 @@
     function shareVerse() {
       const path = window.location.pathname === "/" ? "genesis-1-1" : window.location.pathname.replace("/", "");
       const link = "https://lightoflife.app/" + path;
-      const messages = {
-        en: "📖 Read this Bible verse\n\n" + link + "\n\n🙏 Light of Life App",
-        es: "📖 Lee este versículo bíblico\n\n" + link + "\n\n🙏 Aplicación Light of Life",
-        pt: "📖 Leia este versículo bíblico\n\n" + link + "\n\n🙏 App Light of Life"
-      };
-      const msg = messages[currentLanguage] || messages.en;
+      const msg = "📖 Read this Bible verse\n\n" + link + "\n\n🙏 Light of Life App";
       window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
     }
 
     function shareApp() {
-      const messages = {
-        en: "🙏 Light of Life App\n\nDaily prayer & Bible\n\nDownload:\n" + APP_STORE,
-        es: "🙏 Aplicación Light of Life\n\nOración diaria y Biblia\n\nDescargar:\n" + APP_STORE,
-        pt: "🙏 App Light of Life\n\nOração diária e Bíblia\n\nBaixar:\n" + APP_STORE
-      };
-      const msg = messages[currentLanguage] || messages.en;
+      const msg = "🙏 Light of Life App\n\nDaily prayer & Bible\n\nDownload:\n" + APP_STORE;
       window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
     }
-
     function sharePage() {
       const url = window.location.href;
-      const titles = {
-        en: "Light of Life - Daily prayer & Bible verses",
-        es: "Light of Life - Oración diaria y versículos bíblicos",
-        pt: "Light of Life - Oração diária e versículos bíblicos"
-      };
-      const title = titles[currentLanguage] || titles.en;
+      const title = "Light of Life - Daily prayer & Bible verses";
       
       if (navigator.share) {
         navigator.share({
@@ -978,10 +902,10 @@
     function intentarCopiarAlPortapapeles(url) {
       navigator.clipboard.writeText(url).then(() => {
         const btn = document.getElementById("sharePageBtn");
-        const original = btn.querySelector('span').textContent;
-        btn.querySelector('span').textContent = currentLanguage === 'en' ? '✓ Link copied' : currentLanguage === 'es' ? '✓ Enlace copiado' : '✓ Link copiado';
+        const original = btn.textContent;
+        btn.textContent = "✓ Link copied";
         setTimeout(() => {
-          btn.querySelector('span').textContent = original;
+          btn.textContent = original;
         }, 2000);
       }).catch(err => {
         mostrarCopiaManual(url);
@@ -989,13 +913,12 @@
     }
 
     function mostrarCopiaManual(url) {
-      const messages = {
-        en: "Copy this page link:\n\n(Cmd+C to copy)",
-        es: "Copia este enlace de página:\n\n(Cmd+C para copiar)",
-        pt: "Copie este link de página:\n\n(Cmd+C para copiar)"
-      };
-      prompt(messages[currentLanguage] || messages.en, url);
+      prompt(
+        "Copy this page link:\n\n(Cmd+C to copy)",
+        url
+      );
     }
+    
   </script>
 </body>
 </html>
