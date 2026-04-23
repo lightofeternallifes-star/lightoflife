@@ -797,8 +797,15 @@
     </div>
 
     <div class="hero-phone-real">
-      <img src="/screenshots/en/home-main-en.png" alt="Light of Life Home Screen" />
-    </div>
+  <img
+    id="hero-image"
+    src="/screenshots/en/home-main-en.png"
+    data-en="/screenshots/en/home-main-en.png"
+    data-es="/screenshots/es/home-main-es.png"
+    data-pt="/screenshots/pt/home-main-pt.png"
+    alt="Light of Life Home Screen"
+  />
+</div>
   </section>
 
   <!-- COMMUNITY AID -->
@@ -959,25 +966,34 @@
     let currentLanguage = 'en';
 
     function setLanguage(lang) {
-      currentLanguage = lang;
-      localStorage.setItem('language', lang);
-      
-      // Update active button
-      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-      
-      // Update all elements with data attributes
-      document.querySelectorAll('[data-en]').forEach(el => {
-        const key = `data-${lang}`;
-        if (el.hasAttribute(key)) {
-          if (el.tagName === 'A' || el.tagName === 'BUTTON') {
-            el.textContent = el.getAttribute(key);
-          } else {
-            el.textContent = el.getAttribute(key);
-          }
-        }
-      });
+  currentLanguage = lang;
+  localStorage.setItem('language', lang);
+  
+  // Update active button
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  // Update all elements with data attributes
+  document.querySelectorAll('[data-en]').forEach(el => {
+    const key = `data-${lang}`;
+    if (el.hasAttribute(key)) {
+      if (el.tagName === 'A' || el.tagName === 'BUTTON') {
+        el.textContent = el.getAttribute(key);
+      } else {
+        el.textContent = el.getAttribute(key);
+      }
     }
+  });
+
+  // Update images by language
+  const images = document.querySelectorAll("img[data-en][data-es][data-pt]");
+  images.forEach((img) => {
+    const newSrc = img.getAttribute(`data-${lang}`);
+    if (newSrc) {
+      img.src = newSrc;
+    }
+  });
+}
 
     // Load saved language
     const savedLanguage = localStorage.getItem('language') || 'en';
