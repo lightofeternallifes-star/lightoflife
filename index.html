@@ -123,16 +123,31 @@
     }
 
     @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
 
-      .hero-phone-real img {
-        width: 300px;
-        margin-top: 30px;
-      }
-    }
+  .hero-phone-real {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .hero-copy {
+    order: 2;
+    max-width: 100%;
+  }
+
+  .hero-phone-real img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin-top: 0;
+  }
+}
 
     .hero::before {
       content: '';
