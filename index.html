@@ -124,28 +124,44 @@
 
     @media (max-width: 768px) {
   .hero {
+    display: flex;
     flex-direction: column;
     text-align: center;
   }
 
-  .hero-phone-real {
+  .hero-copy {
+    display: contents;
+  }
+
+  .hero .badge {
     order: 1;
+  }
+
+  .hero h1 {
+    order: 2;
+  }
+
+  .hero .hero-sub {
+    order: 3;
+  }
+
+  .hero-phone-real {
+    order: 4;
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 24px;
-  }
-
-  .hero-copy {
-    order: 2;
-    max-width: 100%;
+    margin: 24px 0 24px 0;
   }
 
   .hero-phone-real img {
     width: 100%;
     max-width: 320px;
     height: auto;
-    margin-top: 0;
+    margin: 0 auto;
+  }
+
+  .hero .cta-group {
+    order: 5;
   }
 }
 
