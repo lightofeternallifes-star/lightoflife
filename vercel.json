@@ -16,6 +16,10 @@
       "destination": "/.well-known/apple-app-site-association"
     },
     {
+      "source": "/legal/:path*",
+      "destination": "/legal/:path*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
