@@ -56,7 +56,7 @@ test('internal links resolve to routes in vercel.json or anchors', () => {
   for (const m of index.matchAll(/href="(\/[^"#?]*)(?:[#?][^"]*)?"/g)) {
     const p = m[1];
     if (p === '/') continue;
-    assert.ok(routes.includes(p), `no route for ${p}`);
+    assert.ok(routes.includes(p) || existsSync(join(root, p)) || /^\/[a-z]+-\d+-\d+$/.test(p), `no route for ${p}`);
   }
   for (const m of index.matchAll(/href="#([^"]+)"/g)) {
     assert.match(index, new RegExp(`id="${m[1]}"`), `missing anchor #${m[1]}`);
@@ -108,4 +108,25 @@ test('page accessibility basics', () => {
   assert.equal((index.match(/<h1\b/g) || []).length, 1);
   assert.match(index, /prefers-reduced-motion/);
   assert.match(index, /<meta name="viewport"/);
+});
+
+test('brand: no version numbers shown as part of the name', () => {
+  for (const f of [index, terms, privacy]) assert.doesNotMatch(f, /Light of Life\s*(V|v)\d|\bV[34]\b/);
+});
+
+test('Open Graph image exists and is referenced', () => {
+  assert.match(index, /og:image" content="https:\/\/www\.lightoflife\.app\/og-image\.png"/);
+  assert.ok(existsSync(join(root, 'og-image.png')));
+  assert.ok(existsSync(join(root, 'favicon.svg')));
+  assert.doesNotMatch(index, /lightoflife\.app\/icon\.png/);
+});
+
+test("Today's verse links to a deep-link slug, not the dead /verse/ path", () => {
+  assert.doesNotMatch(index, /\/verse\/john/);
+  assert.equal((index.match(/href="\/john-3-16"/g) || []).length, 2);
+});
+
+test('deep-link handler is invoked for non-root paths and only redirects on mobile', () => {
+  assert.match(index, /pathname !== "\/"\) \{ openApp\(\); \}/);
+  assert.match(index, /iPhone\|iPad\|iPod\|Android/);
 });
