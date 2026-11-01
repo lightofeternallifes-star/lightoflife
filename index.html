@@ -54,7 +54,8 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 76px;
+      --header-h: 72px;
+      scroll-padding-top: var(--header-h);
       -webkit-text-size-adjust: 100%;
     }
 
@@ -1792,6 +1793,23 @@
     }
 
     if (window.location.pathname !== "/") { openApp(); }
+
+    // Keep anchor targets clear of the sticky header (header height varies by language/viewport)
+    (function () {
+      const header = document.querySelector(".site-header");
+      if (!header) return;
+      const setH = () => document.documentElement.style.setProperty("--header-h", header.offsetHeight + "px");
+      setH();
+      if ("ResizeObserver" in window) new ResizeObserver(setH).observe(header);
+      window.addEventListener("resize", setH);
+      // Late-loading images shift layout; re-align an anchor target once everything has loaded.
+      window.addEventListener("load", () => {
+        setH();
+        const id = decodeURIComponent(window.location.hash.slice(1));
+        const el = id && document.getElementById(id);
+        if (el) el.scrollIntoView({ block: "start" });
+      });
+    })();
 
     // ===== Toast =====
     let toastTimer;

@@ -162,3 +162,8 @@ test('official name is exactly "Light of Life" (no "Light of Life App" / version
   assert.doesNotMatch(index, /Light of Life App|Aplicación Light of Life|App Light of Life/);
   assert.doesNotMatch(index, /Light of Life\s+(V|v)\d/);
 });
+
+test('anchor targets clear the sticky header (scroll-padding + measured header height)', () => {
+  assert.match(index, /scroll-padding-top:\s*var\(--header-h\)/);
+  assert.match(index, /--header-h", header\.offsetHeight/);
+});
