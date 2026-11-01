@@ -167,3 +167,11 @@ test('anchor targets clear the sticky header (scroll-padding + measured header h
   assert.match(index, /scroll-padding-top:\s*var\(--header-h\)/);
   assert.match(index, /--header-h", header\.offsetHeight/);
 });
+
+test('terms do not cross-reference a section number for the membership statement (ES/EN/PT)', () => {
+  const t = flat(read('legal/terms.html'));
+  assert.doesNotMatch(t, /As stated in Section \d|indica en la Sección \d|Conforme a Seção \d|Conforme a Seção/);
+  assert.match(t, /no membership or subscription is available in the published version of the app/);
+  assert.match(t, /no hay ninguna membresía o suscripción disponible en la versión publicada de la app/);
+  assert.match(t, /nenhuma assinatura está disponível na versão publicada do app/);
+});
