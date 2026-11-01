@@ -1808,18 +1808,18 @@
       const path = window.location.pathname === "/" ? "genesis-1-1" : window.location.pathname.replace("/", "");
       const link = "https://lightoflife.app/" + path;
       const messages = {
-        en: "📖 Read this Bible verse\n\n" + link + "\n\n🙏 Light of Life App",
-        es: "📖 Lee este versículo bíblico\n\n" + link + "\n\n🙏 Aplicación Light of Life",
-        pt: "📖 Leia este versículo bíblico\n\n" + link + "\n\n🙏 App Light of Life"
+        en: "📖 Read this Bible verse\n\n" + link + "\n\n🙏 Light of Life",
+        es: "📖 Lee este versículo bíblico\n\n" + link + "\n\n🙏 Light of Life",
+        pt: "📖 Leia este versículo bíblico\n\n" + link + "\n\n🙏 Light of Life"
       };
       window.open("https://wa.me/?text=" + encodeURIComponent(messages[currentLanguage]), "_blank", "noopener");
     }
 
     function shareApp() {
       const messages = {
-        en: "🙏 Light of Life App\n\nDaily prayer & Bible\n\nDownload:\n" + APP_STORE,
-        es: "🙏 Aplicación Light of Life\n\nOración diaria y Biblia\n\nDescargar:\n" + APP_STORE,
-        pt: "🙏 App Light of Life\n\nOração diária e Bíblia\n\nBaixar:\n" + APP_STORE
+        en: "🙏 Light of Life\n\nDaily prayer & Bible\n\nDownload:\n" + APP_STORE,
+        es: "🙏 Light of Life\n\nOración diaria y Biblia\n\nDescargar:\n" + APP_STORE,
+        pt: "🙏 Light of Life\n\nOração diária e Bíblia\n\nBaixar:\n" + APP_STORE
       };
       window.open("https://wa.me/?text=" + encodeURIComponent(messages[currentLanguage]), "_blank", "noopener");
     }

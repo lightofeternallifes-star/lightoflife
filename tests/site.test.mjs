@@ -142,3 +142,23 @@ test('Coming soon: evidence-backed items only, no dates/prices/version numbers, 
   // items already shipped must not be presented as upcoming
   assert.doesNotMatch(road, /Biblical Reflection|Reflexión Bíblica|Bible navigation|navegación bíblica/i);
 });
+
+test('legal URLs cited by the iOS app (/legal/terms, /legal/privacy) resolve to real pages', () => {
+  const v = JSON.parse(read('vercel.json'));
+  const map = Object.fromEntries(v.rewrites.map((r) => [r.source, r.destination]));
+  for (const n of ['privacy', 'terms', 'delete-account']) {
+    for (const src of [`/${n}`, `/legal/${n}`]) {
+      assert.equal(map[src], `/legal/${n}.html`, src);
+      assert.ok(existsSync(join(root, `legal/${n}.html`)));
+    }
+  }
+  // specific legal rewrites must come before the /legal/:path* passthrough and the catch-all
+  const order = v.rewrites.map((r) => r.source);
+  assert.ok(order.indexOf('/legal/terms') < order.indexOf('/legal/:path*'));
+  assert.equal(order.at(-1), '/(.*)');
+});
+
+test('official name is exactly "Light of Life" (no "Light of Life App" / versions in user-facing strings)', () => {
+  assert.doesNotMatch(index, /Light of Life App|Aplicación Light of Life|App Light of Life/);
+  assert.doesNotMatch(index, /Light of Life\s+(V|v)\d/);
+});
