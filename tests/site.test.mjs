@@ -130,3 +130,15 @@ test('deep-link handler is invoked for non-root paths and only redirects on mobi
   assert.match(index, /pathname !== "\/"\) \{ openApp\(\); \}/);
   assert.match(index, /iPhone\|iPad\|iPod\|Android/);
 });
+
+test('Coming soon: evidence-backed items only, no dates/prices/version numbers, 3 languages', () => {
+  const road = index.slice(index.indexOf('id="roadmap"'), index.indexOf('<!-- YOUTUBE -->'));
+  assert.equal((road.match(/<article class="card">/g) || []).length, 3);
+  assert.equal((road.match(/class="status soon"/g) || []).length, 3);
+  assert.doesNotMatch(road, /\$\s?\d|USD|€|\b(20\d\d|Q[1-4])\b|\b(January|February|March|April|June|July|August|September|October|November|December|enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|janeiro|fevereiro|março|maio|junho|julho|setembro|outubro|novembro|dezembro)\b/i);
+  assert.doesNotMatch(road, /\bV[0-9]\b|build\s*\d|\b220\b|\b330\b/i);
+  assert.doesNotMatch(road, /already available|ya está disponible|já está disponível|now available/i);
+  assert.match(road, /no release dates or prices|no hay fechas de lanzamiento ni precios|não há datas de lançamento nem preços/i);
+  // items already shipped must not be presented as upcoming
+  assert.doesNotMatch(road, /Biblical Reflection|Reflexión Bíblica|Bible navigation|navegación bíblica/i);
+});
