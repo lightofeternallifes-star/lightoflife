@@ -175,3 +175,18 @@ test('terms do not cross-reference a section number for the membership statement
   assert.match(t, /no hay ninguna membresía o suscripción disponible en la versión publicada de la app/);
   assert.match(t, /nenhuma assinatura está disponível na versão publicada do app/);
 });
+
+test('operator and data controller: Carriersfy, LLC in Terms and Privacy (ES/EN/PT); no invented entity data', () => {
+  const t = flat(read('legal/terms.html'));
+  const p = flat(read('legal/privacy.html'));
+  assert.match(t, /Light of Life is operated by Carriersfy, LLC/);
+  assert.match(t, /Light of Life es operado por Carriersfy, LLC/);
+  assert.match(t, /O Light of Life é operado pela Carriersfy, LLC/);
+  assert.match(p, /Data controller\.<\/strong> Carriersfy, LLC/);
+  assert.match(p, /Responsable del tratamiento\.<\/strong> Carriersfy, LLC/);
+  assert.match(p, /Controladora dos dados\.<\/strong> A Carriersfy, LLC/);
+  for (const s of [t, p]) {
+    assert.doesNotMatch(s, /\bEIN\b|Tax ID|Delaware|Florida|Texas|registered office|domicilio social/i);
+  }
+  assert.match(p, /Last updated: November 1, 2026/);
+});
