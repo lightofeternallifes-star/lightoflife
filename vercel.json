@@ -28,6 +28,18 @@
       "destination": "/legal/delete-account.html"
     },
     {
+      "source": "/legal/privacy",
+      "destination": "/legal/privacy.html"
+    },
+    {
+      "source": "/legal/terms",
+      "destination": "/legal/terms.html"
+    },
+    {
+      "source": "/legal/delete-account",
+      "destination": "/legal/delete-account.html"
+    },
+    {
       "source": "/legal/:path*",
       "destination": "/legal/:path*"
     },
